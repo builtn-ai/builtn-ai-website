@@ -21,7 +21,22 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://builtnai.com/case-studies.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://builtnai.com/case-study-ai-intake.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://builtnai.com/case-study-digital-warehouse-execution.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://builtnai.com/case-study-inventory-reconciliation.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
