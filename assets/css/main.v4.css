@@ -806,7 +806,7 @@ body.nav-open .site-nav {
   font-size: clamp(14px, 0.85vw, 19px);
   font-weight: 800;
   letter-spacing: 0.16em;
-  color: var(--muted);
+  color: var(--lime);
 }
 .flow-card p { color: var(--muted); }
 .flow-card ul {
