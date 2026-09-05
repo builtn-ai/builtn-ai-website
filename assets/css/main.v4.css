@@ -672,6 +672,11 @@ body.nav-open .site-nav {
   letter-spacing: 0.15em;
   color: var(--lime);
 }
+/* .panel p sets a muted color at equal-or-higher specificity, which was
+   silently overriding .tag-label whenever it's a <p> (case studies, "Pillar"
+   tags, etc.) instead of a <span> — this restores the lime accent everywhere
+   tag-label is used, so the category tag reads the same on every page. */
+.panel .tag-label { color: var(--lime); }
 
 /* ---------- 9. Data / ask section ---------- */
 .band-800 { background: var(--navy-800); }
