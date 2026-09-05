@@ -678,6 +678,11 @@ body.nav-open .site-nav {
    tag-label is used, so the category tag reads the same on every page. */
 .panel .tag-label { color: var(--lime); }
 
+/* Case Studies hub: make each tile's headline lime too, matching the
+   category tag above it -- scoped to this page's tile grid only, not h3
+   sitewide. */
+#case-studies-grid h3 { color: var(--lime); }
+
 /* ---------- 9. Data / ask section ---------- */
 .band-800 { background: var(--navy-800); }
 .band-700 { background: var(--navy-700); }
@@ -1257,7 +1262,7 @@ body.nav-open .site-nav {
 .ref-meta strong { color: #fff; font-size: 1.02em; }
 .ref-meta span { color: var(--muted); font-size: 0.86em; }
 .ref-meta-name { display: flex; align-items: center; gap: 12px; }
-.ref-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; }
+.ref-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: none; }
 
 /* ---------- 19. Print ---------- */
 @media print {
