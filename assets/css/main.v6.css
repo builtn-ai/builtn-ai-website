@@ -678,11 +678,6 @@ body.nav-open .site-nav {
    tag-label is used, so the category tag reads the same on every page. */
 .panel .tag-label { color: var(--lime); }
 
-/* Case Studies hub: make each tile's headline lime too, matching the
-   category tag above it -- scoped to this page's tile grid only, not h3
-   sitewide. */
-#case-studies-grid h3 { color: var(--lime); }
-
 /* ---------- 9. Data / ask section ---------- */
 .band-800 { background: var(--navy-800); }
 .band-700 { background: var(--navy-700); }
