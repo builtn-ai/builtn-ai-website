@@ -1,0 +1,17 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# NOTE: no "immutable" here, deliberately. These filenames are not
+# content-hashed, so an immutable year-long cache pins whatever the browser
+# happened to receive -- including a 404 from a bad deploy -- and no reload
+# will dislodge it. A week's cache with normal revalidation is nearly as fast
+# and cannot get stuck. main.v2.css / main.v2.js carry their version in the
+# filename, so bump that suffix when you need an instant, guaranteed refresh.
+/assets/*
+  Cache-Control: public, max-age=604800
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

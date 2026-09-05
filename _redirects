@@ -1,0 +1,9 @@
+# CAREFUL: Cloudflare's HTML handling serves /foo for foo.html and 301s
+# /foo.html -> /foo to drop the extension. So a rule whose TARGET ends in
+# .html gets bounced straight back to its own source and loops forever
+# (ERR_TOO_MANY_REDIRECTS). Every target below is extensionless, and no
+# target equals its own source, so no rule here can loop.
+
+# Old case-study URL from the previous build, in both forms.
+/casestudyaiintake.html   /case-study-ai-intake   301
+/casestudyaiintake        /case-study-ai-intake   301

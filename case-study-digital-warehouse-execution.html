@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Warehouse Execution Case Study | Built-N-AI</title>
+<meta name="description" content="How a paper pick-ticket process became a fully paperless, real-time digital warehouse execution system built on Dolibarr ERP.">
+<link rel="canonical" href="https://builtnai.com/case-study-digital-warehouse-execution.html">
+<meta name="theme-color" content="#07111f">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="From paper pick tickets to real-time digital warehouse execution">
+<meta property="og:description" content="A fully paperless warehouse execution system eliminated cancelled-order shipments and gave management live visibility into every order.">
+<meta property="og:image" content="https://builtnai.com/assets/img/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/img/favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.v4.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="index.html" aria-label="Built-N-AI home">
+      <span class="brand-text">
+        <strong>BUILT-<em>N</em>-AI</strong>
+        <small>SIMPLIFY. SOLVE. SCALE.</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="what-we-solve.html">What We Solve</a>
+      <a href="how-we-work.html">How We Work</a>
+      <a href="ask-your-business.html">Ask Your Business</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="checkup.html">Take the Checkup &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="case-hero">
+    <div class="wrap">
+      <div class="wrap-narrow" style="padding:0;margin-inline:0">
+        <p class="kicker is-lime">Warehouse execution case study</p>
+        <h1 class="h1">From paper pick tickets to <span>real-time digital execution.</span></h1>
+        <p class="lead">How a basic PDF pick ticket became a fully paperless warehouse execution system built on Dolibarr — eliminating nearly $2,000 a month in losses from cancelled orders that shipped anyway.</p>
+        <p class="case-disclosure">Prior operating experience led by Built-N-AI founder Casey Jackson. Company identity is omitted.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-700">
+    <div class="wrap">
+      <p class="kicker reveal">Results at a glance</p>
+      <div class="metric-grid reveal" style="margin-top:20px">
+        <div class="metric"><strong>100%</strong><span>Paperless picking</span><small>No printed pick tickets, start to finish</small></div>
+        <div class="metric"><strong>100%</strong><span>Cancelled-order shipments eliminated</span><small>~20/month down to zero</small></div>
+        <div class="metric"><strong>~$2,000/mo</strong><span>Losses avoided</span><small>Product no longer shipped after cancellation</small></div>
+        <div class="metric"><strong>Live</strong><span>Order visibility</span><small>Created &rarr; Picked &rarr; QC &rarr; Shipped</small></div>
+        <div class="metric"><strong>FIFO</strong><span>Inventory selection</span><small>With controlled exception handling</small></div>
+        <div class="metric"><strong>Full</strong><span>Audit trail</span><small>Who, what and when, on every transaction</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-alt">
+    <div class="wrap">
+      <div class="prose reveal">
+        <p class="kicker">The challenge</p>
+        <h2 class="h2">A paper process with no visibility once it hit the floor.</h2>
+        <p>Implementing a new ERP created an opportunity to rethink one of the most fundamental warehouse processes: order picking. Dolibarr provided a basic PDF document usable as a pick ticket, but simply automating the printing of that document would have preserved every weakness of the paper-based process it came from.</p>
+        <p>Once a ticket reached the warehouse floor, visibility and control were limited. Tickets could be misplaced, employees had little insight into changes made after printing, and management could not easily tell exactly where an order stood in fulfillment.</p>
+        <p>The most expensive weakness: an order could be cancelled after its pick ticket had already printed, and the warehouse would have no way to know. Picking, processing and shipping continued anyway — about 20 times a month, costing nearly $2,000 in lost product.</p>
+        <blockquote class="quote">&ldquo;Instead of automating an outdated paper process, we redesigned fulfillment around what became possible once the warehouse, inventory and ERP were connected digitally.&rdquo;</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-700">
+    <div class="wrap">
+      <div class="split reveal">
+        <div>
+          <p class="kicker">The solution</p>
+          <h2 class="h2">A fully paperless execution system.</h2>
+          <p style="margin-top:16px">We designed a digital workflow integrated directly with Dolibarr that manages an order from the moment it becomes eligible for fulfillment through picking, quality control and shipment.</p>
+          <p style="margin-top:14px">The system continuously evaluates sales orders against inventory availability and fulfillment rules. When an order qualifies — whether it needs a complete shipment or permits partial fulfillment — a digital pick ticket is created automatically and the order enters the Picking Queue.</p>
+        </div>
+
+        <div class="panel list-card">
+          <h3 class="h3">Wave picking flow</h3>
+          <ul>
+            <li>Order becomes eligible</li>
+            <li>Digital pick ticket created</li>
+            <li>Order enters the Picking Queue</li>
+            <li>Eligible tickets grouped into a wave</li>
+            <li>Wave sequenced bin-to-bin</li>
+            <li>Picker moves first bin &rarr; last bin, no retracing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proof-strip reveal">
+        <strong>Tote-based order control.</strong>
+        <span>Each tote represents one sales order. As items are picked, they are scanned into the tote, which becomes the order&rsquo;s physical and digital identity through fulfillment. Downstream, an employee simply scans the tote and the complete order appears on their screen.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="wrap">
+      <div class="prose reveal">
+        <p class="kicker is-lime">Live, end to end</p>
+        <h2 class="h2">Visibility from order to shipment.</h2>
+        <p>The system provides live status visibility across the entire fulfillment process: Order Created &rarr; Pick Queue &rarr; Wave Assigned &rarr; Picked &rarr; QC &rarr; Waiting to Ship &rarr; Shipped. At any moment, authorized users can see exactly where an order stands.</p>
+        <p>At QC and shipping, the employee scans the tote and the entire order appears. Where appropriate, they validate the transaction with a simple Pass/Fail action rather than manually processing individual items and system transactions — fewer clicks, same control.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">What changed</p>
+        <h2 class="h2">Cancellation is now connected to fulfillment.</h2>
+        <p>The digital architecture solved the most expensive weakness in the old process: a printed pick ticket could stay active on the floor even after the order behind it was cancelled.</p>
+      </div>
+
+      <div class="auto-grid step-grid reveal" style="margin-top:clamp(30px,3.6vw,44px)">
+        <article class="flow-card">
+          <span class="flow-card__step">01</span>
+          <h3 class="h3">Cancellation cascades automatically</h3>
+          <p>When an order is cancelled, its digital pick ticket and sales order cancel with it, the product returns to Finished Goods, and the tote is blocked from shipment.</p>
+        </article>
+        <article class="flow-card">
+          <span class="flow-card__step">02</span>
+          <h3 class="h3">Real-time warning at the tote</h3>
+          <p>If an employee scans a blocked tote, the system immediately warns them the order was cancelled and tells them where the product needs to go.</p>
+        </article>
+        <article class="flow-card">
+          <span class="flow-card__step">03</span>
+          <h3 class="h3">FIFO with controlled override</h3>
+          <p>The system recommends which unit to pick based on FIFO logic. If it isn&rsquo;t physically in the expected bin, an authorized user can override and select another appropriate unit.</p>
+        </article>
+        <article class="flow-card">
+          <span class="flow-card__step">04</span>
+          <h3 class="h3">Missing inventory held</h3>
+          <p>An overridden or missing unit is automatically moved to a non-sellable holding status until it&rsquo;s located and returned to a sellable bin.</p>
+        </article>
+        <article class="flow-card">
+          <span class="flow-card__step">05</span>
+          <h3 class="h3">Complete audit trail</h3>
+          <p>Every action — picking, tote assignment, QC, shipping, cancellations, overrides and inventory moves — is logged with who, what and when.</p>
+        </article>
+      </div>
+
+      <div class="proof-strip reveal">
+        <strong>100% reduction in cancelled orders that shipped anyway.</strong>
+        <span>Previously, about 20 orders a month were cancelled after their pick ticket printed and shipped regardless, costing nearly $2,000 a month in lost product. The digital workflow eliminated all of it, and the reclaimed inventory returns to Finished Goods and resale availability immediately instead of sitting in limbo.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-800">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Before &amp; after</p>
+        <h2 class="h2">The operating model changed.</h2>
+      </div>
+
+      <div class="ba-list reveal">
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>Paper pick ticket, no visibility once on the floor</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>Fully digital, live status at every stage</p></div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>Cancelled orders could still ship (~20/month)</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>100% blocked automatically, ~$2,000/month recovered</p></div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>No wave sequencing, retraced steps on the floor</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>Wave-based picking, sequential bin order</p></div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>Manual line-by-line QC and shipping processing</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>Scan the tote, Pass/Fail the order</p></div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>FIFO enforced manually, if at all</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>System-recommended FIFO with controlled override</p></div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>Missing inventory could stay listed as sellable</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>Automatically moved to non-sellable holding</p></div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-cell is-before"><b>Before</b><p>Little traceability on exceptions</p></div>
+          <div class="ba-cell is-after"><b>After</b><p>Complete audit trail of every action and exception</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-700">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Business impact</p>
+        <h2 class="h2">More than paperless picking.</h2>
+      </div>
+
+      <div class="auto-grid impact-grid reveal" style="--col:270px">
+        <article class="panel">
+          <strong>100%</strong>
+          <h3 class="h3">Cancelled-order shipments eliminated</h3>
+          <p>Digital cancellation now blocks the tote before it can ship.</p>
+        </article>
+        <article class="panel">
+          <strong>$2,000/mo</strong>
+          <h3 class="h3">Losses avoided</h3>
+          <p>Recovered product returns to Finished Goods and resale availability immediately.</p>
+        </article>
+        <article class="panel">
+          <strong>Paperless</strong>
+          <h3 class="h3">Warehouse execution</h3>
+          <p>Every step is digital, from pick-ticket creation through shipment.</p>
+        </article>
+        <article class="panel">
+          <strong>Live</strong>
+          <h3 class="h3">Fulfillment visibility</h3>
+          <p>Management sees exactly where every order stands, in real time.</p>
+        </article>
+        <article class="panel">
+          <strong>Full</strong>
+          <h3 class="h3">Auditability</h3>
+          <p>Every transaction and exception is traceable to a person and a timestamp.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-600">
+    <div class="wrap">
+      <div class="prose reveal">
+        <p class="kicker is-lime">Key takeaway</p>
+        <h2 class="h2">Built for what the process could become, not what it used to be.</h2>
+        <p>Rather than digitize the same paper workflow, the system was redesigned around what became possible once the warehouse, inventory and ERP were connected in real time.</p>
+        <p class="lead">The result: paperless picking, live visibility, and an automatic stop on the single most expensive leak in the old process.</p>
+        <div class="btn-row">
+          <a class="btn btn--lime" href="https://calendly.com/jacksoncas200/ai-conversation-30-min" target="_blank" rel="noopener">Find Your First Automation Opportunity &rarr;</a>
+          <a class="btn btn--ghost" href="checkup.html">Take the 3-Minute Checkup</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/img/logo-mark.png" alt="" width="28" height="28">
+      <span>BUILT-N-AI</span>
+    </a>
+    <p>Find it. Build it. Teach it. &nbsp;&middot;&nbsp; Georgia &bull; Serving clients nationwide</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="what-we-solve.html">What We Solve</a>
+      <a href="how-we-work.html">How We Work</a>
+      <a href="ask-your-business.html">Ask Your Business</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="checkup.html">Checkup</a>
+    </nav>
+    <span>&copy; <span data-year>2026</span> Built-N-AI.</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.v4.js" defer></script>
+</body>
+</html>
