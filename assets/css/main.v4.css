@@ -1251,6 +1251,8 @@ body.nav-open .site-nav {
 }
 .ref-meta strong { color: #fff; font-size: 1.02em; }
 .ref-meta span { color: var(--muted); font-size: 0.86em; }
+.ref-meta-name { display: flex; align-items: center; gap: 12px; }
+.ref-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; }
 
 /* ---------- 19. Print ---------- */
 @media print {
