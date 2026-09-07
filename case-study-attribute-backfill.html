@@ -19,6 +19,31 @@
 
 <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.v6.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Attribute Backfill & Marketplace Sync Case Study",
+  "description": "How an automated tool backfilled 300,000 part records at 98% accuracy in 9 days, then kept running for every new part.",
+  "author": {
+    "@type": "Person",
+    "name": "Casey Jackson",
+    "url": "https://builtn.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Built-N-AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://builtn.ai/assets/img/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://builtn.ai/case-study-attribute-backfill.html"
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -96,6 +121,7 @@
           <p class="kicker is-lime">The solution</p>
           <h2 class="h2">A tool that researches, validates and scores every field.</h2>
           <p style="margin-top:16px">We built an AI-driven Dolibarr tool that cross-references OEM sites, eBay, Amazon and other spec sources for each part, dedupes and validates the data across multiple sources, and returns every field with a confidence score on a review dashboard.</p>
+          <p style="margin-top:14px">Under the hood it&rsquo;s comparing embeddings &mdash; numeric fingerprints of each part&rsquo;s spec sheet &mdash; to find and merge the closest match across sources, the same way a search engine matches a blurry query to the right result.</p>
           <p style="margin-top:14px">After about a week of tuning for AI drift and false positives, it reached 98% accuracy &mdash; high enough that no manual check was required. It was then run against the full database.</p>
         </div>
 
@@ -104,7 +130,7 @@
           <ul>
             <li>Cross-referenced OEM, eBay, Amazon and other spec sources</li>
             <li>Deduped and validated across multiple sources</li>
-            <li>A confidence score per field</li>
+            <li>A confidence score per field &mdash; the same mechanism used in the AI Intake tool</li>
             <li>Auto-pushed to every marketplace listing the same day</li>
           </ul>
         </div>

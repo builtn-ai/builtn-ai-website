@@ -19,6 +19,31 @@
 
 <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.v6.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Intake Case Study",
+  "description": "How a warehouse test became a production AI intake workflow in under two weeks, reducing labor cost 81%.",
+  "author": {
+    "@type": "Person",
+    "name": "Casey Jackson",
+    "url": "https://builtn.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Built-N-AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://builtn.ai/assets/img/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://builtn.ai/case-study-ai-intake.html"
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -97,7 +122,7 @@
         <div>
           <p class="kicker is-lime">The insight</p>
           <h2 class="h2">A late-night warehouse test.</h2>
-          <p style="margin-top:16px">Five electronics items were pulled from inventory. Using only a smartphone and an AI platform, photographs of the retail box and physical item were submitted directly to AI.</p>
+          <p style="margin-top:16px">Five electronics items were pulled from inventory. Using only a smartphone and an AI platform, photographs of the retail box and physical item were submitted directly to AI &mdash; a single multimodal step, one photo in, a full structured product record out.</p>
           <p style="margin-top:14px">The response came back in under 30 seconds — comprehensive enough to test whether AI could eliminate much of the identification and data-entry work.</p>
         </div>
 
@@ -153,11 +178,13 @@
           <span class="flow-card__step">02</span>
           <h3 class="h3">AI identifies it</h3>
           <p>In 15&ndash;30 seconds: manufacturer part number, manufacturer, description and specifications, a marketplace-ready listing title, UPC, MSRP, used market price, and a confidence rate.</p>
+          <p style="margin-top:10px">This isn&rsquo;t the model guessing &mdash; it&rsquo;s retrieval-augmented generation (RAG): the AI looks up the real manufacturer data, UPC and current marketplace pricing before it ever writes the listing.</p>
         </article>
         <article class="flow-card">
           <span class="flow-card__step">03</span>
           <h3 class="h3">Needs review</h3>
           <p>Entries land in a review queue. A person inspects each one and either approves it or overrides the data on the fly &mdash; a judgement call on a screen, not another trip to the pallet. The confidence rate tells them where to look first.</p>
+          <p style="margin-top:10px">This is human-in-the-loop by design &mdash; the AI flags what needs a second look, a person makes the final call before anything hits the ERP.</p>
         </article>
         <article class="flow-card">
           <span class="flow-card__step">04</span>

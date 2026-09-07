@@ -19,6 +19,31 @@
 
 <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.v6.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Digital Warehouse Execution Case Study",
+  "description": "How a paper pick-ticket process became a fully paperless, real-time digital warehouse execution system built on Dolibarr ERP.",
+  "author": {
+    "@type": "Person",
+    "name": "Casey Jackson",
+    "url": "https://builtn.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Built-N-AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://builtn.ai/assets/img/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://builtn.ai/case-study-digital-warehouse-execution.html"
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -108,7 +133,7 @@
             <li>Digital pick ticket created</li>
             <li>Order enters the Picking Queue</li>
             <li>Eligible tickets grouped into a wave</li>
-            <li>Wave sequenced bin-to-bin</li>
+            <li>Wave sequenced bin-to-bin &mdash; orchestration, not separate manual handoffs</li>
             <li>Picker moves first bin &rarr; last bin, no retracing</li>
           </ul>
         </div>
@@ -145,6 +170,7 @@
           <span class="flow-card__step">01</span>
           <h3 class="h3">Cancellation cascades automatically</h3>
           <p>When an order is cancelled, its digital pick ticket and sales order cancel with it, the product returns to Finished Goods, and the tote is blocked from shipment.</p>
+          <p style="margin-top:10px">This is agentic &mdash; the system doesn&rsquo;t just flag the cancellation, it takes the next three actions on its own.</p>
         </article>
         <article class="flow-card">
           <span class="flow-card__step">02</span>
@@ -155,6 +181,7 @@
           <span class="flow-card__step">03</span>
           <h3 class="h3">FIFO with controlled override</h3>
           <p>The system recommends which unit to pick based on FIFO logic. If it isn&rsquo;t physically in the expected bin, an authorized user can override and select another appropriate unit.</p>
+          <p style="margin-top:10px">Guardrails, not a free-for-all: the system recommends, and only an authorized override can deviate from it.</p>
         </article>
         <article class="flow-card">
           <span class="flow-card__step">04</span>
@@ -164,7 +191,7 @@
         <article class="flow-card">
           <span class="flow-card__step">05</span>
           <h3 class="h3">Complete audit trail</h3>
-          <p>Every action — picking, tote assignment, QC, shipping, cancellations, overrides and inventory moves — is logged with who, what and when.</p>
+          <p>Every action — picking, tote assignment, QC, shipping, cancellations, overrides and inventory moves — is logged with who, what and when. Full explainability: nothing the system does is a black box after the fact.</p>
         </article>
       </div>
 

@@ -19,6 +19,31 @@
 
 <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.v6.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Real-Time Inventory Reconciliation Case Study",
+  "description": "A barcode-driven cycle-counting workflow that reconciles itself, automatically identifying missing and mislocated inventory as it's scanned.",
+  "author": {
+    "@type": "Person",
+    "name": "Casey Jackson",
+    "url": "https://builtn.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Built-N-AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://builtn.ai/assets/img/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://builtn.ai/case-study-inventory-reconciliation.html"
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -86,6 +111,7 @@
         <p>Cycle counting sounds simple: count what&rsquo;s physically in a bin and compare it with what the ERP says should be there. The difficult part is resolving the discrepancies &mdash; deciding where missing inventory belongs in the system, whether it should remain sellable, who updates its status, and how to correct items that are physically in one bin but expected in another.</p>
         <p>Under the existing process, much of that reconciliation was manual and cumbersome. We wanted the physical count itself to drive the reconciliation, instead of a person reconciling it after the fact.</p>
         <blockquote class="quote">&ldquo;The employee captures reality. The system reconciles itself to reality.&rdquo;</blockquote>
+        <p class="reveal" style="margin-top:10px">This is grounding in practice &mdash; the system&rsquo;s records don&rsquo;t drift from what&rsquo;s physically on the shelf.</p>
       </div>
     </div>
   </section>
@@ -152,7 +178,7 @@
         <article class="flow-card">
           <span class="flow-card__step">03</span>
           <h3 class="h3">Missing inventory held</h3>
-          <p>Anything expected but not scanned is marked missing and moved to non-sellable holding.</p>
+          <p>Anything expected but not scanned is marked missing and moved to non-sellable holding &mdash; the edge cases the system is built to catch, not its failure mode.</p>
         </article>
         <article class="flow-card">
           <span class="flow-card__step">04</span>
