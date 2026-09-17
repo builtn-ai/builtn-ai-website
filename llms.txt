@@ -1,0 +1,28 @@
+# Built-N-AI
+
+> Built-N-AI helps businesses find expensive problems worth solving, build practical AI and automation solutions, and teach their teams to run them. Founded by Casey Jackson. Based in Georgia, serving clients nationwide.
+
+Approach: start with the business problem, not the technology. Find it. Build it. Teach it.
+
+## Services
+- [What We Solve](https://builtn.ai/what-we-solve): The expensive, repetitive, measurable friction we look for: duplicate work, reporting delays, disconnected systems and repeated decisions.
+- [How We Work](https://builtn.ai/how-we-work): A practical operating model built around quick wins, measurable value and capability that stays inside your company.
+- [Ask Your Business](https://builtn.ai/ask-your-business): When the right systems are connected securely to AI, authorized superusers can explore ERP, inventory, sales and operational data in plain English.
+- [Free Efficiency Checkup](https://builtn.ai/checkup): Ten questions, three minutes. Highlights the areas of a business most likely to contain problems worth solving.
+
+## Case studies
+- [Case Studies overview](https://builtn.ai/case-studies): Operating results from AI and automation workflows built for receiving, product data, warehouse execution and inventory accuracy.
+- [AI Intake](https://builtn.ai/case-study-ai-intake): A warehouse test became a production AI intake workflow in under two weeks, reducing labor cost 81%.
+- [Digital Warehouse Execution](https://builtn.ai/case-study-digital-warehouse-execution): A paper pick-ticket process became a paperless, real-time digital warehouse execution system built on Dolibarr ERP.
+- [Bulk Receiving Automation](https://builtn.ai/case-study-bulk-receiving): Eliminating one-by-one barcode entry cut receiving labor cost 75% and processing time 4x on large purchase orders.
+- [Attribute Backfill & Marketplace Sync](https://builtn.ai/case-study-attribute-backfill): An automated tool backfilled 300,000 part records at 98% accuracy in 9 days, then kept running for every new part.
+- [Real-Time Inventory Reconciliation](https://builtn.ai/case-study-inventory-reconciliation): A barcode-driven cycle-counting workflow that identifies missing and mislocated inventory as it is scanned.
+
+## About
+- [About Casey Jackson](https://builtn.ai/about): Founder of Built-N-AI: P&L leadership, multi-site operations, ERP, supply chain, automation and hands-on AI implementation.
+- [Executive Profile](https://builtn.ai/executive-profile): VP/SVP Operations & IT executive. 30+ years P&L, turnaround and M&A leadership; two-time Inc. 500 operator.
+- [References](https://builtn.ai/references): References from coworkers, employees, clients and business partners.
+- [FAQ](https://builtn.ai/faq): What Built-N-AI does, pricing and engagement terms, AI trust and safety, and results.
+
+## Contact
+- [Contact](https://builtn.ai/contact): Email cjackson@builtn.ai or book a free 30-minute conversation: https://calendly.com/jacksoncas200/ai-conversation-30-min
