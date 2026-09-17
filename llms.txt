@@ -1,6 +1,6 @@
 # Built-N-AI
 
-> Built-N-AI helps businesses find expensive problems worth solving, build practical AI and automation solutions, and teach their teams to run them. Founded by Casey Jackson. Based in Georgia, serving clients nationwide.
+> Built-N-AI is an AI automation and operations consulting company helping businesses reduce costs, eliminate manual work, integrate systems and improve productivity through practical AI, automation and process improvement. Built-N-AI helps businesses find expensive problems worth solving, build practical AI and automation solutions, and teach their teams to run them. Founded by Casey Jackson. Based in Georgia, serving clients nationwide.
 
 Approach: start with the business problem, not the technology. Find it. Build it. Teach it.
 
@@ -9,6 +9,20 @@ Approach: start with the business problem, not the technology. Find it. Build it
 - [How We Work](https://builtn.ai/how-we-work): A practical operating model built around quick wins, measurable value and capability that stays inside your company.
 - [Ask Your Business](https://builtn.ai/ask-your-business): When the right systems are connected securely to AI, authorized superusers can explore ERP, inventory, sales and operational data in plain English.
 - [Free Efficiency Checkup](https://builtn.ai/checkup): Ten questions, three minutes. Highlights the areas of a business most likely to contain problems worth solving.
+
+## Service pages
+- [Services overview](https://builtn.ai/services)
+- [AI Receiving & Intake Automation](https://builtn.ai/ai-receiving-intake-automation)
+- [AI Product Data & Marketplace Automation](https://builtn.ai/ai-product-data-marketplace-automation)
+- [Digital Warehouse Execution](https://builtn.ai/digital-warehouse-execution)
+- [Inventory Accuracy & Reconciliation Automation](https://builtn.ai/inventory-accuracy-automation)
+- [AI & ERP Integration](https://builtn.ai/ai-erp-integration)
+
+## Insights
+- [How much can AI automation save a small business?](https://builtn.ai/how-much-can-ai-automation-save-a-business)
+- [How to identify business processes to automate with AI](https://builtn.ai/how-to-identify-processes-to-automate-with-ai)
+- [AI and automation for inventory and warehouse operations](https://builtn.ai/ai-automation-inventory-warehouse-operations)
+- [How AI can integrate with an existing ERP instead of replacing it](https://builtn.ai/ai-erp-integration-without-replacing-erp)
 
 ## Case studies
 - [Case Studies overview](https://builtn.ai/case-studies): Operating results from AI and automation workflows built for receiving, product data, warehouse execution and inventory accuracy.
