@@ -21,6 +21,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.v6.css">
+<link rel="stylesheet" href="assets/css/video.v1.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -61,6 +62,16 @@
       <p class="kicker is-lime">How we work</p>
       <h1 class="h1 page-h1">Find it. Build it. Teach it.</h1>
       <p class="lead">Quick wins, measurable value, and capability that stays inside your company.</p>
+    </div>
+  </section>
+  <section class="section band-800 video-band" aria-label="Video">
+    <div class="wrap">
+      <div class="video-frame">
+        <video data-inview muted loop playsinline preload="none" poster="assets/video/clip-how-we-work-poster.jpg" aria-label="Animated overview of Find it, Build it, Teach it">
+          <source src="assets/video/clip-how-we-work.mp4" type="video/mp4">
+        </video>
+        <a class="btn btn--dark btn--play video-frame__cta" href="assets/video/builtn-overview.mp4" data-video-modal data-poster="assets/video/builtn-overview-poster.jpg"><span class="play-dot" aria-hidden="true"></span>Watch the Full Overview</a>
+      </div>
     </div>
   </section>
 <section id="method" class="section band-700">
@@ -251,5 +262,6 @@
 </footer>
 
 <script src="assets/js/main.v6.js" defer></script>
+<script src="assets/js/video.v1.js" defer></script>
 </body>
 </html>
