@@ -31,6 +31,9 @@ Approach: start with the business problem, not the technology. Find it. Build it
 - [Bulk Receiving Automation](https://builtn.ai/case-study-bulk-receiving): Eliminating one-by-one barcode entry cut receiving labor cost 75% and processing time 4x on large purchase orders.
 - [Attribute Backfill & Marketplace Sync](https://builtn.ai/case-study-attribute-backfill): An automated tool backfilled 300,000 part records at 98% accuracy in 9 days, then kept running for every new part.
 - [Real-Time Inventory Reconciliation](https://builtn.ai/case-study-inventory-reconciliation): A barcode-driven cycle-counting workflow that identifies missing and mislocated inventory as it is scanned.
+- [Subway Self-Service Ordering Kiosk](https://builtn.ai/case-study-subway-self-service-kiosk): A restaurant self-service ordering kiosk went from pitch to live stores in 4 months, with 15-20% higher average orders, ~40 fewer labor hours per week and a 24-week ROI.
+- [Computer Parts Unlimited](https://builtn.ai/case-study-computer-parts-unlimited): A $15,000 founder-funded startup grew to $40M in six years, profitable in month three, four U.S./Canadian sites on SAP ERP, Inc. 500 twice, and exited to an investment group.
+- [Assurant Digital Extended Warranty](https://builtn.ai/case-study-assurant-digital-extended-warranty): An automated pricing engine executing up to 10,000 price changes per hour helped an Amazon extended-warranty launch reach ~$20M in year one and ~$50M combined retail warranty sales after year one.
 
 ## About
 - [About Casey Jackson](https://builtn.ai/about): Founder of Built-N-AI: P&L leadership, multi-site operations, ERP, supply chain, automation and hands-on AI implementation.
