@@ -7,3 +7,6 @@
 # Old case-study URL from the previous build, in both forms.
 /casestudyaiintake.html   /case-study-ai-intake   301
 /casestudyaiintake        /case-study-ai-intake   301
+
+# Contact merged into the About page (2026-10-03).
+/contact   /about#contact   301

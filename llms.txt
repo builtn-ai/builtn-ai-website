@@ -6,6 +6,7 @@ Approach: start with the business problem, not the technology. Find it. Build it
 
 ## Services
 - [What We Solve](https://builtn.ai/what-we-solve): The expensive, repetitive, measurable friction we look for: duplicate work, reporting delays, disconnected systems and repeated decisions.
+- [Dolibarr ERP](https://builtn.ai/dolibarr-erp): Free, open-source Dolibarr ERP at enterprise scale for small and middle-market inventory businesses, plus the custom modules Built-N-AI has built on it (AI intake, bulk receiving, digital warehouse execution, inventory reconciliation, product data and marketplace sync).
 - [How We Work](https://builtn.ai/how-we-work): A practical operating model built around quick wins, measurable value and capability that stays inside your company.
 - [Ask Your Business](https://builtn.ai/ask-your-business): When the right systems are connected securely to AI, authorized superusers can explore ERP, inventory, sales and operational data in plain English.
 - [Free Efficiency Checkup](https://builtn.ai/checkup): Ten questions, three minutes. Highlights the areas of a business most likely to contain problems worth solving.
@@ -42,4 +43,4 @@ Approach: start with the business problem, not the technology. Find it. Build it
 - [FAQ](https://builtn.ai/faq): What Built-N-AI does, pricing and engagement terms, AI trust and safety, and results.
 
 ## Contact
-- [Contact](https://builtn.ai/contact): Email cjackson@builtn.ai or book a free 30-minute conversation: https://calendly.com/jacksoncas200/ai-conversation-30-min
+- [Contact](https://builtn.ai/about#contact): Email cjackson@builtn.ai or book a free 30-minute conversation: https://calendly.com/jacksoncas200/ai-conversation-30-min
