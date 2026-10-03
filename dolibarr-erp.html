@@ -54,6 +54,13 @@
   ]
 }
 </script>
+<style>
+/* dolibarr-erp page only */
+.page-head .kicker.hero-kicker { font-size: clamp(1.25rem, 2.4vw, 2rem); line-height: 1.25; }
+.page-h1.hero-points { font-size: clamp(1.45rem, 2.9vw, 2.35rem); line-height: 1.25; max-width: 36ch; }
+.page-h1.hero-points b { display: block; font-weight: inherit; position: relative; padding-left: 1.25em; margin: 0.45em 0; }
+.page-h1.hero-points b::before { content: ""; position: absolute; left: 0; top: 0.42em; width: 0.42em; height: 0.42em; border-radius: 50%; background: var(--lime); }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -91,8 +98,8 @@
 
   <section class="page-head">
     <div class="wrap">
-      <p class="kicker is-lime">Dolibarr ERP &middot; Free. Open source. Enterprise scale.</p>
-      <h1 class="h1 page-h1">Enterprise-size ERP. Zero license fees. Built for inventory businesses that outgrew spreadsheets but will never pay enterprise prices.</h1>
+      <p class="kicker is-lime hero-kicker">Dolibarr ERP &middot; Free. Open source. Enterprise scale.</p>
+      <h1 class="h1 page-h1 hero-points"><b>Enterprise-size ERP.</b> <b>Zero license fees.</b> <b>Built for inventory businesses that outgrew spreadsheets but will never pay enterprise prices.</b></h1>
       <p class="lead">Dolibarr is a free, open-source ERP that runs purchasing, inventory, sales, accounting and CRM in one system. Built-N-AI implements it for small and middle-market inventory businesses and extends it with the custom modules we built and ran inside a live operation: AI receiving intake, single-touch bulk receiving, paperless warehouse execution, real-time cycle counting and marketplace product-data automation.</p>
       <div class="btn-row" style="margin-top:22px">
         <a class="btn btn--lime" href="https://calendly.com/jacksoncas200/ai-conversation-30-min" target="_blank" rel="noopener">Book a Free 30-Minute Conversation &rarr;</a>
@@ -146,8 +153,20 @@
           <p>Customers, prospects, suppliers and contacts in one place, with opportunities, agenda, tasks and email tracking.</p>
         </article>
         <article class="panel list-card">
-          <h3 class="h3">Accounting &amp; bank</h3>
+          <h3 class="h3">Full accounting &amp; bank</h3>
           <p>Double-entry accounting, chart of accounts, bank reconciliation, payment tracking, multi-currency and tax handling.</p>
+        </article>
+        <article class="panel list-card">
+          <h3 class="h3">Financial reporting</h3>
+          <p>Dolibarr records every financial transaction in the general ledger and journals. We add Apache Superset on top as the report writer, so profit and loss, balance sheet and any other report you need are built from the same data the warehouse and office already entered.</p>
+        </article>
+        <article class="panel list-card">
+          <h3 class="h3">Shipping</h3>
+          <p>Shipments created from sales orders, partial shipments, tracking numbers, shipping methods and delivery receipts, with stock decremented as each shipment goes out.</p>
+        </article>
+        <article class="panel list-card">
+          <h3 class="h3">Help desk &amp; ticketing</h3>
+          <p>Ticket system for customer issues and requests, with assignment, status tracking and an optional public page where customers open and follow their own tickets.</p>
         </article>
         <article class="panel list-card">
           <h3 class="h3">Manufacturing &amp; projects</h3>
