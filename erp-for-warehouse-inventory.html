@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERP for Warehouse and Inventory Management | Paperless Picking, Barcode Receiving, Real-Time Cycle Counts on Dolibarr | Built-N-AI</title>
+<meta name="description" content="ERP for warehouse and inventory management: multi-warehouse bin stock, barcode receiving, paperless picking with QC, one-touch shipping and cycle counts that reconcile on the spot. How Built-N-AI runs it on Dolibarr with no per-user license fees, proven at 400,000+ SKUs.">
+<link rel="canonical" href="https://builtn.ai/erp-for-warehouse-inventory">
+<meta name="theme-color" content="#01050e">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://builtn.ai/erp-for-warehouse-inventory">
+<meta property="og:title" content="ERP for Warehouse and Inventory Management | Built-N-AI">
+<meta property="og:description" content="Paperless picking, barcode receiving, real-time cycle counts and one-touch shipping on a free open-source ERP, proven at 400,000+ SKUs.">
+<meta property="og:image" content="https://builtn.ai/assets/img/og-share-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.v6.css">
+<style>
+.cmp-wrap{overflow-x:auto;margin-top:24px;-webkit-overflow-scrolling:touch}
+.cmp{width:100%;border-collapse:collapse;min-width:720px;font-size:0.95em}
+.cmp th,.cmp td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.cmp th{color:#fff;font-weight:700;background:rgba(36,181,255,0.06)}
+.cmp td{color:var(--muted)}
+.cmp td:first-child{color:#fff;font-weight:600;white-space:nowrap}
+.cmp .ok{color:var(--lime);font-weight:700}
+.faq-item{border-top:1px solid var(--line);padding:18px 0}
+.faq-item h3{margin-bottom:8px}
+.faq-item p{color:var(--muted)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ERP for Warehouse and Inventory Management: From Paper to Real-Time Execution",
+  "description": "What a warehouse needs from its ERP (receiving, bin-level stock, picking, QC, shipping, cycle counting) and how Built-N-AI delivers it on Dolibarr with custom modules proven in a live operation.",
+  "url": "https://builtn.ai/erp-for-warehouse-inventory",
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "author": {"@type": "Person", "name": "Casey Jackson", "url": "https://builtn.ai/about"},
+  "publisher": {"@type": "Organization", "name": "Built-N-AI", "url": "https://builtn.ai"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What ERP is best for a small warehouse?", "acceptedAnswer": {"@type": "Answer", "text": "A small warehouse needs an ERP that handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr, a free open-source ERP, with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping. It runs a live operation with more than 400,000 SKUs and no per-user license fees."}},
+    {"@type": "Question", "name": "Can an ERP run paperless picking and QC?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Built-N-AI's Digital Warehouse Execution module on Dolibarr replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero, avoiding about $2,000 a month in lost product."}},
+    {"@type": "Question", "name": "Do I need a separate WMS if I have an ERP?", "acceptedAnswer": {"@type": "Answer", "text": "Not for a small or middle-market warehouse. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside the Dolibarr ERP, so picking, QC, shipping and cycle counts write directly to the same inventory records the office uses."}},
+    {"@type": "Question", "name": "How does barcode cycle counting work in an ERP?", "acceptedAnswer": {"@type": "Answer", "text": "In Built-N-AI's Real-Time Inventory Reconciliation module, an employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to a non-sellable holding status, corrects the location of mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero."}},
+    {"@type": "Question", "name": "How fast can an ERP receive a large purchase order?", "acceptedAnswer": {"@type": "Answer", "text": "With Built-N-AI's Single-Touch Bulk Receiving module, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, either by scanning the first barcode and auto-sequencing the rest with labels printing as you go, or by uploading a spreadsheet and receiving the whole PO with no scanning."}},
+    {"@type": "Question", "name": "What does a warehouse ERP cost?", "acceptedAnswer": {"@type": "Answer", "text": "Built-N-AI's Dolibarr ERP implementation is a fixed $29,500 for up to 25 users, one entity and one warehouse, typically live in about 1 month, with no per-user software license fees. Warehouse execution, bulk receiving and cycle-count modules are scoped separately as fixed-price deliverables."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://builtn.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Dolibarr ERP", "item": "https://builtn.ai/dolibarr-erp"},
+    {"@type": "ListItem", "position": 3, "name": "ERP for warehouse and inventory", "item": "https://builtn.ai/erp-for-warehouse-inventory"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="/" aria-label="Built-N-AI home">
+      <span class="brand-text">
+        <strong>BUILT-<em>N</em>-AI</strong>
+        <small>SIMPLIFY. SOLVE. SCALE.</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="/what-we-solve">What We Solve</a>
+      <a href="/dolibarr-erp">Dolibarr ERP</a>
+      <a href="/how-we-work">How We Work</a>
+      <a href="/ask-your-business">Ask Your Business</a>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/references">References</a>
+      <a href="/about">About</a>
+      <a href="/executive-profile">Executive Profile</a>
+      <a href="/faq">FAQ</a>
+      <a class="nav-cta" href="/checkup">Take the Checkup &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb" style="font-size:0.9em;color:var(--muted);margin-bottom:14px"><a class="text-link" href="/" style="font-weight:500">Home</a> <span aria-hidden="true">&rsaquo;</span> <a class="text-link" href="/dolibarr-erp" style="font-weight:500">Dolibarr ERP</a> <span aria-hidden="true">&rsaquo;</span> <span style="color:#fff">ERP for warehouse and inventory</span></nav>
+      <p class="kicker is-lime">ERP for warehouse and inventory management &middot; Updated October 2026</p>
+      <h1 class="h1 page-h1">ERP for warehouse and inventory: from paper pick tickets to real-time execution.</h1>
+      <p class="lead">The warehouse is where an ERP earns its keep or quietly fails. This is what a warehouse needs from its ERP, what the free Dolibarr core covers, and the modules Built-N-AI built to run receiving, picking, QC, shipping and cycle counts paperless inside the ERP, proven in a live operation with more than 400,000 SKUs.</p>
+      <div class="btn-row">
+        <a class="btn btn--lime" href="https://calendly.com/jacksoncas200/ai-conversation-30-min" target="_blank" rel="noopener">Book a Free 30-Minute Conversation &rarr;</a>
+        <a class="btn btn--ghost" href="#flow">See the warehouse flow &darr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-700">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Measured on the floor</p>
+        <h2 class="h2">What changed when the warehouse ran inside the ERP.</h2>
+      </div>
+      <div class="metric-grid reveal" style="margin-top:28px">
+        <div class="metric"><strong>~20 to 0</strong><span>Cancelled orders shipped per month</span><small>About $2,000 a month in lost product avoided</small></div>
+        <div class="metric"><strong>4 hrs to 1</strong><span>To receive a 500-line PO</span><small>Labor cost per PO down 75%</small></div>
+        <div class="metric"><strong>Zero</strong><span>Manual list comparisons in cycle counts</span><small>Bins reconcile the moment scanning finishes</small></div>
+        <div class="metric"><strong>100%</strong><span>Paperless picking</span><small>No printed pick tickets, start to finish</small></div>
+      </div>
+      <div class="prose reveal" style="margin-top:24px">
+        <p>These numbers come from TXS Corp, where Built-N-AI implemented and ran Dolibarr as the operating system of a hardware distribution and consumer-electronics resale business with more than 400,000 SKUs and up to 300 order lines a day. Each result has a published case study linked below.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" class="section band-600">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">The warehouse flow</p>
+        <h2 class="h2">Dock to door, every step inside the ERP.</h2>
+        <p class="lead">Column 2 is the free Dolibarr core. Column 3 is what Built-N-AI adds. Nothing in column 3 touches the ERP core.</p>
+      </div>
+      <div class="cmp-wrap reveal">
+        <table class="cmp">
+          <thead><tr><th>Step</th><th>Dolibarr out of the box</th><th>Built-N-AI module</th></tr></thead>
+          <tbody>
+            <tr><td>1. Identify inbound product</td><td>Product catalog, supplier references.</td><td>AI Advanced Intake: photograph a unit once; AI returns part number, specs, UPC and price with a confidence score and creates the product record and PO line. Receiving labor cost fell 81%.</td></tr>
+            <tr><td>2. Receive against the PO</td><td><span class="ok">Included:</span> receipts tied to the PO and to stock.</td><td>Single-Touch Bulk Receiving: scan the first barcode and auto-sequence the rest with labels printing as you go, or upload a spreadsheet and receive the whole PO. 500 lines in 1 hour instead of 4.</td></tr>
+            <tr><td>3. Put away to bins</td><td><span class="ok">Included:</span> multiple warehouses, stock movements, valuation, min/max reorder.</td><td>Product, lot and variant data mapped to DYMO labels; photo capture in the browser attached to the process.</td></tr>
+            <tr><td>4. Track lots and serials</td><td><span class="ok">Included:</span> lot, batch and serial numbers.</td><td>Serialized units carried through QC, picking and returns.</td></tr>
+            <tr><td>5. Release and pick orders</td><td>PDF pick ticket.</td><td>Digital Warehouse Execution: orders evaluated against stock and fulfillment rules, paperless pick queue, bin-to-bin wave picking, FIFO selection with controlled exceptions, tote-based order control. A cancelled order cancels its pick ticket and blocks the tote.</td></tr>
+            <tr><td>6. Quality control</td><td>Not in core.</td><td>Pass/Fail QC at the station, plus a Quality Control and Tech Lab module with inspection, testing and technician work orders.</td></tr>
+            <tr><td>7. Pack and ship</td><td><span class="ok">Included:</span> shipments and delivery notes.</td><td>EasyPost One-Touch Shipping: label bought and printed, tracking written back to the order, best-rate selection with carrier override on the fly.</td></tr>
+            <tr><td>8. Keep the count true</td><td>Manual inventory with adjustments.</td><td>Real-Time Inventory Reconciliation: scan every unit in a bin; missing units move to non-sellable holding, mislocated units are corrected, and the bin reconciles on the spot with a full audit trail.</td></tr>
+            <tr><td>9. Handle returns</td><td>Credit notes and supplier returns.</td><td>RMA and return-to-vendor workflows inside the ERP.</td></tr>
+            <tr><td>10. See where every order stands</td><td>Order status fields.</td><td>Live visibility from Order Created to Picked, QC, Boxing and Shipped, with who, what and when on every transaction. Apache Superset dashboards in production.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="btn-row reveal" style="margin-top:24px">
+        <a class="btn btn--ghost" href="/case-study-digital-warehouse-execution">Warehouse execution case study &rarr;</a>
+        <a class="btn btn--ghost" href="/case-study-inventory-reconciliation">Inventory reconciliation case study &rarr;</a>
+        <a class="btn btn--ghost" href="/case-study-bulk-receiving">Bulk receiving case study &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-700">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Why inside the ERP, not beside it</p>
+        <h2 class="h2">A separate WMS is a second system to pay for, sync and blame.</h2>
+      </div>
+      <div class="prose reveal" style="margin-top:20px">
+        <p>Most small and middle-market warehouses do not need a standalone warehouse management system. They need the ERP they already run to execute on the floor. When picking, QC, shipping and cycle counts are modules inside Dolibarr, every scan writes to the same inventory record the office, the website and the marketplaces read. There is no nightly sync, no second license, and no argument about which system is right.</p>
+        <p>The design rule we follow: automate the outcome, not the paper. Printing a PDF pick ticket faster would have preserved every weakness of the paper process. Redesigning fulfillment around a connected warehouse, inventory and ERP removed them.</p>
+      </div>
+      <div class="auto-grid reveal" style="--col:260px;margin-top:24px">
+        <div class="panel"><h3 class="h3">One inventory record</h3><p>Receiving, picking, counts and marketplaces all write to the same Dolibarr stock, bin by bin.</p></div>
+        <div class="panel"><h3 class="h3">Exceptions handled, not hidden</h3><p>Missing units go to a suspense or non-sellable status until found, so they stop being promised to customers.</p></div>
+        <div class="panel"><h3 class="h3">Audit trail on everything</h3><p>Who, what and when on every receipt, pick, QC result, shipment and adjustment.</p></div>
+        <div class="panel"><h3 class="h3">Upgrade path intact</h3><p>26 modules, 1 logged core change. The ERP can be upgraded; the modules come along.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-600">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Who this fits</p>
+        <h2 class="h2">Warehouses that have outgrown paper and spreadsheets.</h2>
+      </div>
+      <div class="auto-grid reveal" style="--col:260px;margin-top:24px">
+        <div class="panel"><h3 class="h3">Distributors and wholesalers</h3><p>Thousands of SKUs across multiple bins, where picking accuracy and receiving speed drive margin. <a class="text-link" href="/erp-for-distributors">ERP for distributors &rarr;</a></p></div>
+        <div class="panel"><h3 class="h3">E-commerce and marketplace sellers</h3><p>Amazon, eBay and your own store, where a cancelled order must stop on the floor, not at the dock.</p></div>
+        <div class="panel"><h3 class="h3">IT asset recovery and refurbishers</h3><p>Serialized, unmanifested inbound product that needs identification, grading and QC before it is sellable.</p></div>
+        <div class="panel"><h3 class="h3">Repair, depot and service parts</h3><p>Parts inventory, RMAs and technician work orders that have to tie back to one set of books.</p></div>
+      </div>
+      <div class="btn-row reveal" style="margin-top:24px">
+        <a class="btn btn--ghost" href="/erp-implementation-cost">What it costs: $29,500 fixed &rarr;</a>
+        <a class="btn btn--ghost" href="/dolibarr-erp#modules">See all the custom modules &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-700">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Questions warehouse managers ask</p>
+        <h2 class="h2">Warehouse ERP, answered plainly.</h2>
+      </div>
+      <div class="reveal" style="margin-top:20px">
+        <div class="faq-item"><h3 class="h3">What ERP is best for a small warehouse?</h3><p>One that handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping, in a live operation with more than 400,000 SKUs and no per-user license fees.</p></div>
+        <div class="faq-item"><h3 class="h3">Can an ERP run paperless picking and QC?</h3><p>Yes. The Digital Warehouse Execution module replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero.</p></div>
+        <div class="faq-item"><h3 class="h3">Do I need a separate WMS if I have an ERP?</h3><p>Not for a small or middle-market warehouse. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside Dolibarr, so every scan writes to the same inventory record the office uses.</p></div>
+        <div class="faq-item"><h3 class="h3">How does barcode cycle counting work in an ERP?</h3><p>An employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to non-sellable holding, corrects mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero.</p></div>
+        <div class="faq-item"><h3 class="h3">How fast can an ERP receive a large purchase order?</h3><p>With Single-Touch Bulk Receiving, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, by auto-sequencing barcodes with labels printing as you go or by uploading a spreadsheet and receiving the whole PO with no scanning.</p></div>
+        <div class="faq-item"><h3 class="h3">What does a warehouse ERP cost?</h3><p>Built-N-AI&rsquo;s Dolibarr ERP implementation is a fixed $29,500 for up to 25 users, one entity and one warehouse, typically live in about 1 month, with no per-user license fees. Warehouse execution, bulk receiving and cycle-count modules are scoped separately as fixed-price deliverables. <a class="text-link" href="/erp-implementation-cost">Full cost guide &rarr;</a></p></div>
+      </div>
+      <p class="reveal" style="margin-top:20px;color:var(--muted);font-size:0.9em">Sources: operating figures are from Built-N-AI&rsquo;s live Dolibarr implementation at TXS Corp and the published case studies linked above. EasyPost, Rithum, Amazon and eBay are trademarks of their respective owners.</p>
+    </div>
+  </section>
+
+  <section class="section band-600" aria-label="Related ERP guides">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Related ERP guides</p>
+        <h2 class="h2">Keep reading.</h2>
+      </div>
+      <div class="auto-grid reveal" style="--col:260px;margin-top:24px">
+        <a class="panel list-card" href="/erp-for-distributors" style="display:block;text-decoration:none"><p class="tag-label">By industry</p><h3 class="h3">ERP for distributors and wholesalers</h3><p>The distributor checklist and the modules that run 400,000+ SKUs and marketplace orders.</p></a>
+        <a class="panel list-card" href="/dolibarr-erp" style="display:block;text-decoration:none"><p class="tag-label">Hub</p><h3 class="h3">Dolibarr ERP for inventory businesses</h3><p>Out-of-the-box functionality, the custom modules, who it is for and how an implementation runs.</p></a>
+        <a class="panel list-card" href="/erp-implementation-cost" style="display:block;text-decoration:none"><p class="tag-label">Cost</p><h3 class="h3">How much does an ERP implementation cost?</h3><p>Published vendor ranges and the fixed-price Dolibarr implementation at $29,500.</p></a>
+      </div>
+      <p class="reveal" style="margin-top:20px"><a class="text-link" href="/erp-resources">All ERP guides and comparisons &rarr;</a></p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta-inner">
+      <div>
+        <p class="kicker is-lime">Start with a conversation</p>
+        <h2 class="h2">What problem is costing you more than it should?</h2>
+        <p>Let&rsquo;s spend 30 minutes looking for the first problem worth solving.</p>
+      </div>
+      <a class="btn btn--lime" href="https://calendly.com/jacksoncas200/ai-conversation-30-min" target="_blank" rel="noopener">Book a Free 30-Minute Conversation &rarr;</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="footer-brand" href="/">
+      <img src="assets/img/logo-mark.png" alt="" width="28" height="28">
+      <span>BUILT-N-AI</span>
+    </a>
+    <p>Find it. Build it. Teach it. &nbsp;&middot;&nbsp; Georgia &bull; Serving clients nationwide</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/what-we-solve">What We Solve</a>
+      <a href="/dolibarr-erp">Dolibarr ERP</a>
+      <a href="/erp-resources">ERP Guides</a>
+      <a href="/how-we-work">How We Work</a>
+      <a href="/ask-your-business">Ask Your Business</a>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/references">References</a>
+      <a href="/about">About</a>
+      <a href="/executive-profile">Executive Profile</a>
+      <a href="/faq">FAQ</a>
+      <a href="/about#contact">Contact</a>
+      <a href="/checkup">Checkup</a>
+      <a href="/services">Services</a>
+      <a href="/insights">Insights</a>
+      <a href="https://www.linkedin.com/company/built-n-ai" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+    <span>&copy; <span data-year>2026</span> Built-N-AI.</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.v6.js" defer></script>
+</body>
+</html>
