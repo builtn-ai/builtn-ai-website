@@ -79,6 +79,8 @@
 .erp-nav a { display: inline-block; padding: 7px 13px; border: 1px solid #2f4a66; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: 0.9rem; text-decoration: none; white-space: nowrap; }
 .erp-nav a:hover { border-color: var(--blue); background: rgba(36,181,255,0.08); }
 .erp-nav a[aria-current="page"] { border-color: var(--lime); color: var(--lime); background: rgba(167,240,74,0.08); }
+.erp-nav .erp-nav-set { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; }
+.erp-nav .erp-nav-group { color: var(--muted); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 10px; }
 .erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 7px 0; color: var(--blue); font-weight: 700; }
 </style>
 </head>
@@ -119,13 +121,26 @@
   <nav class="erp-nav" aria-label="ERP section">
     <div class="wrap">
       <span class="erp-nav-label">ERP</span>
-      <a href="/dolibarr-erp">Dolibarr ERP overview</a>
-      <a href="/dolibarr-vs-odoo">Dolibarr vs Odoo</a>
-      <a href="/erp-implementation-cost">What it costs</a>
-      <a href="/erp-for-distributors" aria-current="page">For distributors</a>
-      <a href="/erp-for-warehouse-inventory">For warehouse &amp; inventory</a>
-      <a href="/netsuite-alternative">NetSuite alternative</a>
-      <a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a>
+      <a href="/dolibarr-erp">Overview</a>
+      <span class="erp-nav-set">
+        <span class="erp-nav-group">Compare</span>
+        <a href="/dolibarr-vs-odoo">vs Odoo</a>
+        <a href="/netsuite-alternative">vs NetSuite</a>
+      </span>
+      <span class="erp-nav-set">
+        <span class="erp-nav-group">Cost</span>
+        <a href="/erp-implementation-cost">What it costs</a>
+      </span>
+      <span class="erp-nav-set">
+        <span class="erp-nav-group">By industry</span>
+        <a href="/erp-for-distributors" aria-current="page">Distributors</a>
+        <a href="/erp-for-warehouse-inventory">Warehouse &amp; inventory</a>
+      </span>
+      <span class="erp-nav-set">
+        <span class="erp-nav-group">Services</span>
+        <a href="/dolibarr-implementation">Implementation</a>
+        <a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a>
+      </span>
       <a class="erp-nav-more" href="/erp-resources">All ERP guides &rarr;</a>
     </div>
   </nav>
