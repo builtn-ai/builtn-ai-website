@@ -51,12 +51,70 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "What ERP is best for a small warehouse?", "acceptedAnswer": {"@type": "Answer", "text": "A small warehouse needs an ERP that handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr, a free open-source ERP, with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping. It runs a live operation with more than 400,000 SKUs and no per-user license fees."}},
-    {"@type": "Question", "name": "Can an ERP run paperless picking and QC?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Built-N-AI's Digital Warehouse Execution module on Dolibarr replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero, avoiding about $2,000 a month in lost product."}},
-    {"@type": "Question", "name": "Do I need a separate WMS if I have an ERP?", "acceptedAnswer": {"@type": "Answer", "text": "Not for a small or middle-market warehouse. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside the Dolibarr ERP, so picking, QC, shipping and cycle counts write directly to the same inventory records the office uses."}},
-    {"@type": "Question", "name": "How does barcode cycle counting work in an ERP?", "acceptedAnswer": {"@type": "Answer", "text": "In Built-N-AI's Real-Time Inventory Reconciliation module, an employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to a non-sellable holding status, corrects the location of mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero."}},
-    {"@type": "Question", "name": "How fast can an ERP receive a large purchase order?", "acceptedAnswer": {"@type": "Answer", "text": "With Built-N-AI's Single-Touch Bulk Receiving module, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, either by scanning the first barcode and auto-sequencing the rest with labels printing as you go, or by uploading a spreadsheet and receiving the whole PO with no scanning."}},
-    {"@type": "Question", "name": "What does a warehouse ERP cost?", "acceptedAnswer": {"@type": "Answer", "text": "Built-N-AI's Dolibarr ERP implementation is a fixed $29,500 for up to 25 users, one entity and one warehouse, typically live in about 1 month, with no per-user software license fees. Warehouse execution, bulk receiving and cycle-count modules are scoped separately as fixed-price deliverables."}}
+    {
+      "@type": "Question",
+      "name": "What ERP is best for a small warehouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best ERP for warehouse management in a small operation handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr, a free open-source ERP, with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping. It runs a live operation with more than 400,000 SKUs and no per-user license fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an ERP run paperless picking and QC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Built-N-AI's Digital Warehouse Execution module on Dolibarr replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero, avoiding about $2,000 a month in lost product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a WMS, and do I need a separate one if I have an ERP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A WMS is a warehouse management system: warehouse management software that directs receiving, put-away, picking and shipping. A small or middle-market warehouse usually does not need a separate one. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside the Dolibarr ERP, so picking, QC, shipping and cycle counts write directly to the same inventory records the office uses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does barcode cycle counting work in an ERP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Built-N-AI's Real-Time Inventory Reconciliation module, an employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to a non-sellable holding status, corrects the location of mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can an ERP receive a large purchase order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With Built-N-AI's Single-Touch Bulk Receiving module, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, either by scanning the first barcode and auto-sequencing the rest with labels printing as you go, or by uploading a spreadsheet and receiving the whole PO with no scanning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can AI automate ERP receiving?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI receiving pays off when you receive large volumes of unknown or unmanifested retail product. A receiver photographs a unit once; AI identifies it, returns the part number, specs, UPC and price with a confidence score, and creates the product record and purchase order line. At TXS Corp that cut receiving labor cost 81%, from $23,500 to $4,500 per truckload. It is not the right tool for a standard purchase order that already exists; there, single-touch bulk receiving is faster, taking a 500-line PO from 4 hours to 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How good is Dolibarr for warehouse management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dolibarr warehouse management out of the box covers multiple warehouses, stock movements, valuation and min/max reorder levels, and Dolibarr barcode inventory covers barcode support with lot, batch and serial tracking. Paperless picking, wave and FIFO picking, tote control, Pass/Fail QC and cycle counts that reconcile on the spot are not in the core; Built-N-AI adds them as modules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a warehouse ERP cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Built-N-AI's Dolibarr ERP implementation is a fixed $29,500 for up to 25 users, one entity and one warehouse, typically live in about 1 month, with no per-user software license fees. Warehouse execution, bulk receiving and cycle-count modules are scoped separately as fixed-price deliverables."
+      }
+    }
   ]
 }
 </script>
@@ -150,9 +208,9 @@
   <section class="page-head">
     <div class="wrap">
       <nav aria-label="Breadcrumb" style="font-size:0.9em;color:var(--muted);margin-bottom:14px"><a class="text-link" href="/" style="font-weight:500">Home</a> <span aria-hidden="true">&rsaquo;</span> <a class="text-link" href="/dolibarr-erp" style="font-weight:500">Dolibarr ERP</a> <span aria-hidden="true">&rsaquo;</span> <span style="color:#fff">ERP for warehouse and inventory</span></nav>
-      <p class="kicker is-lime">ERP for warehouse and inventory management &middot; Updated October 2026</p>
+      <p class="kicker is-lime">Warehouse ERP software &middot; Inventory management ERP &middot; Updated October 2026</p>
       <h1 class="h1 page-h1">ERP for warehouse and inventory: from paper pick tickets to real-time execution.</h1>
-      <p class="lead">The warehouse is where an ERP earns its keep or quietly fails. This is what a warehouse needs from its ERP, what the free Dolibarr core covers, and the modules Built-N-AI built to run receiving, picking, QC, shipping and cycle counts paperless inside the ERP, proven in a live operation with more than 400,000 SKUs.</p>
+      <p class="lead">The warehouse is where an ERP earns its keep or quietly fails. This is what an ERP for warehouse management, or any inventory ERP, has to do, what the free Dolibarr core covers, and the modules Built-N-AI built to run receiving, picking, QC, shipping and cycle counts paperless inside the ERP, proven in a live operation with more than 400,000 SKUs.</p>
       <div class="btn-row">
         <a class="btn btn--lime" href="https://calendly.com/jacksoncas200/ai-conversation-30-min" target="_blank" rel="noopener">Book a Free 30-Minute Conversation &rarr;</a>
         <a class="btn btn--ghost" href="#flow">See the warehouse flow &darr;</a>
@@ -183,13 +241,13 @@
       <div class="section-head reveal">
         <p class="kicker is-lime">The warehouse flow</p>
         <h2 class="h2">Dock to door, every step inside the ERP.</h2>
-        <p class="lead">Column 2 is the free Dolibarr core. Column 3 is what Built-N-AI adds. Nothing in column 3 touches the ERP core.</p>
+        <p class="lead">A multi warehouse ERP with barcode inventory is the baseline for any ERP system for inventory management. Column 2 is the free Dolibarr core. Column 3 is what Built-N-AI adds. Nothing in column 3 touches the ERP core.</p>
       </div>
       <div class="cmp-wrap reveal">
         <table class="cmp">
           <thead><tr><th>Step</th><th>Dolibarr out of the box</th><th>Built-N-AI module</th></tr></thead>
           <tbody>
-            <tr><td>1. Identify inbound product</td><td>Product catalog, supplier references.</td><td>AI Advanced Intake: photograph a unit once; AI returns part number, specs, UPC and price with a confidence score and creates the product record and PO line. Receiving labor cost fell 81%.</td></tr>
+            <tr><td>1. Identify inbound product</td><td>Product catalog, supplier references.</td><td>AI Advanced Intake: photograph a unit once; AI returns part number, specs, UPC and price with a confidence score and creates the product record and PO line. Receiving labor cost fell 81%. Built for large volumes of unknown or unmanifested retail product; a standard PO that already exists goes straight to step 2.</td></tr>
             <tr><td>2. Receive against the PO</td><td><span class="ok">Included:</span> receipts tied to the PO and to stock.</td><td>Single-Touch Bulk Receiving: scan the first barcode and auto-sequence the rest with labels printing as you go, or upload a spreadsheet and receive the whole PO. 500 lines in 1 hour instead of 4.</td></tr>
             <tr><td>3. Put away to bins</td><td><span class="ok">Included:</span> multiple warehouses, stock movements, valuation, min/max reorder.</td><td>Product, lot and variant data mapped to DYMO labels; photo capture in the browser attached to the process.</td></tr>
             <tr><td>4. Track lots and serials</td><td><span class="ok">Included:</span> lot, batch and serial numbers.</td><td>Serialized units carried through QC, picking and returns.</td></tr>
@@ -217,7 +275,7 @@
         <h2 class="h2">A separate WMS is a second system to pay for, sync and blame.</h2>
       </div>
       <div class="prose reveal" style="margin-top:20px">
-        <p>Most small and middle-market warehouses do not need a standalone warehouse management system. They need the ERP they already run to execute on the floor. When picking, QC, shipping and cycle counts are modules inside Dolibarr, every scan writes to the same inventory record the office, the website and the marketplaces read. There is no nightly sync, no second license, and no argument about which system is right.</p>
+        <p>Most small and middle-market warehouses do not need a standalone warehouse management system. They need the ERP they already run to execute on the floor. Good ERP inventory management software does that without a second system, whether you call it ERP inventory software, ERP stock management or the inventory management module in ERP. When picking, QC, shipping and cycle counts are modules inside Dolibarr, every scan writes to the same inventory record the office, the website and the marketplaces read. There is no nightly sync, no second license, and no argument about which system is right.</p>
         <p>The design rule we follow: automate the outcome, not the paper. Printing a PDF pick ticket faster would have preserved every weakness of the paper process. Redesigning fulfillment around a connected warehouse, inventory and ERP removed them.</p>
       </div>
       <div class="auto-grid reveal" style="--col:260px;margin-top:24px">
@@ -255,11 +313,13 @@
         <h2 class="h2">Warehouse ERP, answered plainly.</h2>
       </div>
       <div class="reveal" style="margin-top:20px">
-        <div class="faq-item"><h3 class="h3">What ERP is best for a small warehouse?</h3><p>One that handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping, in a live operation with more than 400,000 SKUs and no per-user license fees.</p></div>
+        <div class="faq-item"><h3 class="h3">What ERP is best for a small warehouse?</h3><p>The best ERP for warehouse management in a small operation handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr, a free open-source ERP, with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping. It runs a live operation with more than 400,000 SKUs and no per-user license fees.</p></div>
         <div class="faq-item"><h3 class="h3">Can an ERP run paperless picking and QC?</h3><p>Yes. The Digital Warehouse Execution module replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero.</p></div>
-        <div class="faq-item"><h3 class="h3">Do I need a separate WMS if I have an ERP?</h3><p>Not for a small or middle-market warehouse. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside Dolibarr, so every scan writes to the same inventory record the office uses.</p></div>
+        <div class="faq-item"><h3 class="h3">What is a WMS, and do I need a separate one if I have an ERP?</h3><p>A WMS is a warehouse management system: warehouse management software that directs receiving, put-away, picking and shipping. A small or middle-market warehouse usually does not need a separate one. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside the Dolibarr ERP, so picking, QC, shipping and cycle counts write directly to the same inventory records the office uses.</p></div>
         <div class="faq-item"><h3 class="h3">How does barcode cycle counting work in an ERP?</h3><p>An employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to non-sellable holding, corrects mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero.</p></div>
         <div class="faq-item"><h3 class="h3">How fast can an ERP receive a large purchase order?</h3><p>With Single-Touch Bulk Receiving, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, by auto-sequencing barcodes with labels printing as you go or by uploading a spreadsheet and receiving the whole PO with no scanning.</p></div>
+        <div class="faq-item"><h3 class="h3">How can AI automate ERP receiving?</h3><p>AI receiving pays off when you receive large volumes of unknown or unmanifested retail product. A receiver photographs a unit once; AI identifies it, returns the part number, specs, UPC and price with a confidence score, and creates the product record and purchase order line. At TXS Corp that cut receiving labor cost 81%, from $23,500 to $4,500 per truckload. It is not the right tool for a standard purchase order that already exists; there, single-touch bulk receiving is faster, taking a 500-line PO from 4 hours to 1.</p></div>
+        <div class="faq-item"><h3 class="h3">How good is Dolibarr for warehouse management?</h3><p>Dolibarr warehouse management out of the box covers multiple warehouses, stock movements, valuation and min/max reorder levels, and Dolibarr barcode inventory covers barcode support with lot, batch and serial tracking. Paperless picking, wave and FIFO picking, tote control, Pass/Fail QC and cycle counts that reconcile on the spot are not in the core; Built-N-AI adds them as modules.</p></div>
         <div class="faq-item"><h3 class="h3">What does a warehouse ERP cost?</h3><p>Built-N-AI&rsquo;s Dolibarr ERP implementation is a fixed $29,500 for up to 25 users, one entity and one warehouse, typically live in about 1 month, with no per-user license fees. Warehouse execution, bulk receiving and cycle-count modules are scoped separately as fixed-price deliverables. <a class="text-link" href="/erp-implementation-cost">Full cost guide &rarr;</a></p></div>
       </div>
       <p class="reveal" style="margin-top:20px;color:var(--muted);font-size:0.9em">Sources: operating figures are from Built-N-AI&rsquo;s live Dolibarr implementation at TXS Corp and the published case studies linked above. EasyPost, Rithum, Amazon and eBay are trademarks of their respective owners.</p>

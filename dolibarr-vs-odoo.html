@@ -52,13 +52,78 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Is Dolibarr really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dolibarr is released under the GNU GPL v3 or later. There is no paid edition, no per-user fee and no feature gate. You pay for hosting, implementation and any custom work, not for the software."}},
-    {"@type": "Question", "name": "Is Odoo free?", "acceptedAnswer": {"@type": "Answer", "text": "Odoo Community is free under the LGPL v3, and Odoo offers a One App Free plan. Full accounting, the barcode app, Quality, PLM, Studio, the mobile apps, hosting, support and version upgrades are part of Odoo Enterprise, which is priced per user per month: US$24.90 (Standard, yearly billing) or US$37.40 (Custom, yearly billing) as listed on odoo.com in October 2026, with that discount valid for 12 months on the initial users ordered."}},
-    {"@type": "Question", "name": "What does Dolibarr cost compared with Odoo for 20 users?", "acceptedAnswer": {"@type": "Answer", "text": "Dolibarr license cost is $0 for any number of users. Odoo Enterprise at the listed Custom plan rate of US$37.40 per user per month is about $8,976 per year for 20 users, before implementation. Both need hosting and implementation; those costs are comparable."}},
-    {"@type": "Question", "name": "Can Dolibarr handle barcode scanning and multiple warehouses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Multi-warehouse stock, barcode support, lot, batch and serial tracking, stock movements and inventory valuation are in the free Dolibarr core. Built-N-AI adds paperless pick tickets, wave picking, tote-based order control, QC and single-touch bulk receiving through its custom modules."}},
-    {"@type": "Question", "name": "What are the disadvantages of Dolibarr?", "acceptedAnswer": {"@type": "Answer", "text": "Dolibarr does not support multi-company natively (an external module is required), its user interface is plainer than Odoo Enterprise, there is no vendor-run mobile app, and the US partner ecosystem is smaller. Advanced warehouse execution, AI intake and marketplace automation are not in the core and have to be added as modules."}},
-    {"@type": "Question", "name": "Can Dolibarr be customized without changing its core?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dolibarr has a module framework and a REST API. Built-N-AI runs 26 custom modules on a live Dolibarr instance with only 1 modification to the native source code, which keeps version upgrades practical."}},
-    {"@type": "Question", "name": "When is Odoo the better choice?", "acceptedAnswer": {"@type": "Answer", "text": "Choose Odoo when you need native multi-company, a vendor-hosted SaaS with iOS and Android apps, a no-code customization tool like Studio, or a large partner network, and when the per-user subscription fits the budget."}}
+    {
+      "@type": "Question",
+      "name": "Is Dolibarr really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Dolibarr is released under the GNU GPL v3 or later. There is no paid edition, no per-user fee and no feature gate. You pay for hosting, implementation and any custom work, not for the software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Odoo free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Odoo Community is free under the LGPL v3, and Odoo offers a One App Free plan. Full accounting, the barcode app, Quality, PLM, Studio, the mobile apps, hosting, support and version upgrades are part of Odoo Enterprise. Odoo pricing on odoo.com in October 2026 is US$24.90 (Standard) or US$49.00 (Custom) per user per month with yearly billing, discounted from US$31.10 and US$61.00 for the first 12 months on the initial users ordered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Dolibarr cost compared with Odoo for 20 users?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dolibarr license cost is $0 for any number of users. Odoo Enterprise on the Custom plan is US$49.00 per user per month for the first 12 months and US$61.00 after, which is $11,760 to $14,640 a year for 20 users before implementation. Both need hosting and implementation; those costs are comparable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Dolibarr handle barcode scanning and multiple warehouses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Multi-warehouse stock, barcode support, lot, batch and serial tracking, stock movements and inventory valuation are in the free Dolibarr core. Built-N-AI adds paperless pick tickets, wave picking, tote-based order control, QC and single-touch bulk receiving through its custom modules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the disadvantages of Dolibarr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dolibarr does not support multi-company natively (an external module is required), its user interface is plainer than Odoo Enterprise, there is no vendor-run mobile app, and the US partner ecosystem is smaller. Advanced warehouse execution, AI intake and marketplace automation are not in the core and have to be added as modules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Dolibarr be customized without changing its core?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Dolibarr has a module framework and a REST API. Built-N-AI runs 26 custom modules on a live Dolibarr instance with only 1 modification to the native source code, which keeps version upgrades practical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Dolibarr support manufacturing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Dolibarr includes bills of materials and manufacturing orders in its free core. Built-N-AI's production build adds a Quality Control and Tech Lab module with inspection, testing and technician workflows, and advanced work orders beyond basic manufacturing orders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Dolibarr suitable for a midsize business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Built-N-AI ran Dolibarr as the operating system of a 30-user distribution business with more than 400,000 SKUs and up to 300 order lines a day with no performance issues. The limits to plan for: multi-company is not native and needs an external module, and advanced warehouse execution, AI intake and marketplace integration are added as modules rather than included in the core."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is Odoo the better choice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Odoo for small business is a good fit when you need native multi-company, a vendor-hosted SaaS with iOS and Android apps, a no-code tool like Studio, or a large partner network, and the per-user subscription fits the budget."
+      }
+    }
   ]
 }
 </script>
@@ -154,7 +219,7 @@
       <nav aria-label="Breadcrumb" style="font-size:0.9em;color:var(--muted);margin-bottom:14px"><a class="text-link" href="/" style="font-weight:500">Home</a> <span aria-hidden="true">&rsaquo;</span> <a class="text-link" href="/dolibarr-erp" style="font-weight:500">Dolibarr ERP</a> <span aria-hidden="true">&rsaquo;</span> <span style="color:#fff">Dolibarr vs Odoo</span></nav>
       <p class="kicker is-lime">Dolibarr vs Odoo &middot; Open-source ERP comparison &middot; Updated October 2026</p>
       <h1 class="h1 page-h1">Dolibarr vs Odoo: which open-source ERP fits a small distributor?</h1>
-      <p class="lead">Both started as free, open-source ERPs. One stayed free. This is the comparison we wish we had before we chose, written by an operator who runs Dolibarr with 26 custom modules in a live distribution business.</p>
+      <p class="lead">Both started as free, open-source ERPs. One stayed free. This is the comparison we wish we had before we chose, written by an operator who runs Dolibarr with 26 custom modules in a live distribution business. If you are weighing Odoo ERP against Dolibarr (Odoo vs Dolibarr), or looking for Odoo alternatives or Dolibarr alternatives, start here.</p>
       <div class="btn-row">
         <a class="btn btn--lime" href="https://calendly.com/jacksoncas200/ai-conversation-30-min" target="_blank" rel="noopener">Book a Free 30-Minute Conversation &rarr;</a>
         <a class="btn btn--ghost" href="#table">Jump to the comparison table &darr;</a>
@@ -170,12 +235,12 @@
       </div>
       <div class="prose reveal" style="margin-top:20px">
         <p>Dolibarr is released under the GPL v3 or later. Every module, including stock, barcode, lot and serial tracking, bills of materials, manufacturing orders, double-entry accounting, point of sale and the REST API, is in the free core. There is no paid edition.</p>
-        <p>Odoo Community is free under the LGPL v3, but the parts an inventory business leans on hardest are Enterprise-only: comprehensive accounting with bank reconciliation, the barcode app, Quality, PLM, Studio, the iOS and Android apps, and vendor hosting, support and version upgrades. Odoo Enterprise is priced per user per month: US$24.90 on the Standard plan or US$37.40 on the Custom plan with yearly billing (US$31.10 and US$46.80 billed monthly), and odoo.com notes the discount is valid for 12 months on the initial users ordered.</p>
-        <p>For 20 users, that is roughly $8,976 a year at the listed Custom rate before implementation, every year, and it grows with every seat you add. Dolibarr is $0 for 20 users or 200.</p>
+        <p>Odoo Community is free under the LGPL v3, but the parts an inventory business leans on hardest are Enterprise-only: comprehensive accounting with bank reconciliation, the barcode app, Quality, PLM, Studio, the iOS and Android apps, and vendor hosting, support and version upgrades. Odoo pricing for Enterprise is per user per month: US$24.90 on the Standard plan or US$49.00 on the Custom plan with yearly billing. odoo.com shows those as discounted from US$31.10 and US$61.00, and notes the discount is valid for 12 months on the initial users ordered.</p>
+        <p>For 20 users on the Custom plan, that is $11,760 a year at the first-year rate and $14,640 at the regular rate, before implementation, and it grows with every seat you add. Dolibarr is $0 for 20 users or 200.</p>
       </div>
       <div class="metric-grid reveal" style="margin-top:28px">
         <div class="metric"><strong>$0</strong><span>Dolibarr license, any user count</span><small>GPL v3+, no paid edition</small></div>
-        <div class="metric"><strong>$24.90&ndash;$37.40</strong><span>Odoo Enterprise, per user per month</span><small>Yearly billing, odoo.com, Oct 2026</small></div>
+        <div class="metric"><strong>$24.90&ndash;$49.00</strong><span>Odoo Enterprise, per user per month</span><small>First-year rate, yearly billing, odoo.com</small></div>
         <div class="metric"><strong>26</strong><span>Custom modules we run on Dolibarr</span><small>With 1 change to native source code</small></div>
         <div class="metric"><strong>Live</strong><span>Since April 2026</span><small>Running a real distribution operation</small></div>
       </div>
@@ -187,7 +252,7 @@
       <div class="section-head reveal">
         <p class="kicker is-lime">Side by side</p>
         <h2 class="h2">What you get, what you pay for, what you own.</h2>
-        <p class="lead">Facts below are from dolibarr.org, the Dolibarr GitHub repository and odoo.com as of October 2026. Prices change; check the vendor page before you sign anything.</p>
+        <p class="lead">An ERP software comparison or ERP system comparison is only as good as its sources. Facts below are from dolibarr.org, the Dolibarr GitHub repository and odoo.com as of October 2026. Prices change; check the vendor page before you sign anything.</p>
       </div>
       <div class="cmp-wrap reveal">
         <table class="cmp">
@@ -196,7 +261,7 @@
           </thead>
           <tbody>
             <tr><td>License</td><td>GPL v3 or later. One edition, fully open source.</td><td>Community: LGPL v3. Enterprise: proprietary subscription on top of Community.</td></tr>
-            <tr><td>Software cost</td><td><span class="ok">$0</span> for unlimited users.</td><td>One App Free: $0 (one app). Enterprise: US$24.90 (Standard) or US$37.40 (Custom) per user per month, yearly billing; US$31.10 / US$46.80 monthly. Discount valid 12 months on initial users.</td></tr>
+            <tr><td>Software cost</td><td><span class="ok">$0</span> for unlimited users.</td><td>One App Free: $0 (one app). Enterprise: US$24.90 (Standard) or US$49.00 (Custom) per user per month, yearly billing, for the first 12 months on initial users; US$31.10 / US$61.00 regular.</td></tr>
             <tr><td>Full accounting</td><td><span class="ok">Included:</span> double-entry ledger, bank accounts, reconciliation, reports.</td><td>Invoicing in Community. Comprehensive accounting (bank reconciliation, budgets, consolidation, localizations) is Enterprise.</td></tr>
             <tr><td>Multi-warehouse stock</td><td><span class="ok">Included</span></td><td>Included in Community.</td></tr>
             <tr><td>Barcode scanning</td><td><span class="ok">Included</span> in core, extended by our modules for receiving, picking and cycle counts.</td><td>Barcode app is Enterprise-only.</td></tr>
@@ -224,7 +289,7 @@
         <h2 class="h2">&ldquo;Dolibarr is fine for very small companies, but it runs out of road.&rdquo;</h2>
       </div>
       <div class="prose reveal" style="margin-top:20px">
-        <p>That is the recurring line in most Dolibarr vs Odoo reviews, and for stock Dolibarr it is a fair point. Out of the box it will not run a paperless warehouse, photograph a unit and create the product record, or push product data to eBay and Amazon the same day.</p>
+        <p>That is the recurring line in nearly every Dolibarr review and Dolibarr vs Odoo comparison, and for stock Dolibarr it is a fair point. Out of the box it will not run a paperless warehouse, photograph a unit and create the product record, or push product data to eBay and Amazon the same day.</p>
         <p>It does not have to. Dolibarr has a module framework and a REST API, and that is where the gap closes. Built-N-AI runs 26 custom modules on a live Dolibarr instance with only 1 modification to the native source code, so version upgrades stay practical. Those modules are what turned a free ERP into the operating system of a multi-million-dollar hardware distribution and asset-recovery business.</p>
       </div>
       <div class="auto-grid reveal" style="--col:280px;margin-top:28px">
@@ -264,12 +329,14 @@
       </div>
       <div class="reveal" style="margin-top:20px">
         <div class="faq-item"><h3 class="h3">Is Dolibarr really free?</h3><p>Yes. Dolibarr is released under the GNU GPL v3 or later. There is no paid edition, no per-user fee and no feature gate. You pay for hosting, implementation and any custom work, not for the software.</p></div>
-        <div class="faq-item"><h3 class="h3">Is Odoo free?</h3><p>Odoo Community is free under the LGPL v3, and Odoo offers a One App Free plan. Full accounting, the barcode app, Quality, PLM, Studio, the mobile apps, hosting, support and version upgrades are part of Odoo Enterprise, priced at US$24.90 (Standard) or US$37.40 (Custom) per user per month with yearly billing as listed on odoo.com in October 2026; the discount is valid for 12 months on the initial users ordered.</p></div>
-        <div class="faq-item"><h3 class="h3">What does Dolibarr cost compared with Odoo for 20 users?</h3><p>Dolibarr license cost is $0 for any number of users. Odoo Enterprise at the listed Custom rate of US$37.40 per user per month is about $8,976 a year for 20 users before implementation. Both need hosting and implementation; those costs are comparable.</p></div>
+        <div class="faq-item"><h3 class="h3">Is Odoo free?</h3><p>Odoo Community is free under the LGPL v3, and Odoo offers a One App Free plan. Full accounting, the barcode app, Quality, PLM, Studio, the mobile apps, hosting, support and version upgrades are part of Odoo Enterprise. Odoo pricing on odoo.com in October 2026 is US$24.90 (Standard) or US$49.00 (Custom) per user per month with yearly billing, discounted from US$31.10 and US$61.00 for the first 12 months on the initial users ordered.</p></div>
+        <div class="faq-item"><h3 class="h3">What does Dolibarr cost compared with Odoo for 20 users?</h3><p>Dolibarr license cost is $0 for any number of users. Odoo Enterprise on the Custom plan is US$49.00 per user per month for the first 12 months and US$61.00 after, which is $11,760 to $14,640 a year for 20 users before implementation. Both need hosting and implementation; those costs are comparable.</p></div>
         <div class="faq-item"><h3 class="h3">Can Dolibarr handle barcode scanning and multiple warehouses?</h3><p>Yes. Multi-warehouse stock, barcode support, lot, batch and serial tracking, stock movements and inventory valuation are in the free core. Built-N-AI adds paperless pick tickets, wave picking, tote-based order control, QC and single-touch bulk receiving through its custom modules.</p></div>
         <div class="faq-item"><h3 class="h3">What are the disadvantages of Dolibarr?</h3><p>No native multi-company (an external module is required), a plainer interface than Odoo Enterprise, no vendor-run mobile app, and a smaller US partner ecosystem. Advanced warehouse execution, AI intake and marketplace automation are not in the core and have to be added as modules.</p></div>
         <div class="faq-item"><h3 class="h3">Can Dolibarr be customized without changing its core?</h3><p>Yes. Dolibarr has a module framework and a REST API. Built-N-AI runs 26 custom modules on a live Dolibarr instance with only 1 modification to the native source code, which keeps version upgrades practical.</p></div>
-        <div class="faq-item"><h3 class="h3">When is Odoo the better choice?</h3><p>When you need native multi-company, a vendor-hosted SaaS with iOS and Android apps, a no-code tool like Studio, or a large partner network, and the per-user subscription fits the budget.</p></div>
+        <div class="faq-item"><h3 class="h3">Does Dolibarr support manufacturing?</h3><p>Yes. Dolibarr includes bills of materials and manufacturing orders in its free core. Built-N-AI&rsquo;s production build adds a Quality Control and Tech Lab module with inspection, testing and technician workflows, and advanced work orders beyond basic manufacturing orders.</p></div>
+        <div class="faq-item"><h3 class="h3">Is Dolibarr suitable for a midsize business?</h3><p>Yes. Built-N-AI ran Dolibarr as the operating system of a 30-user distribution business with more than 400,000 SKUs and up to 300 order lines a day with no performance issues. The limits to plan for: multi-company is not native and needs an external module, and advanced warehouse execution, AI intake and marketplace integration are added as modules rather than included in the core.</p></div>
+        <div class="faq-item"><h3 class="h3">When is Odoo the better choice?</h3><p>Odoo for small business is a good fit when you need native multi-company, a vendor-hosted SaaS with iOS and Android apps, a no-code tool like Studio, or a large partner network, and the per-user subscription fits the budget.</p></div>
       </div>
       <p class="reveal" style="margin-top:20px;color:var(--muted);font-size:0.9em">Sources: <a class="text-link" href="https://www.odoo.com/pricing-plan" target="_blank" rel="noopener">odoo.com pricing</a>, <a class="text-link" href="https://www.odoo.com/page/editions" target="_blank" rel="noopener">odoo.com editions</a>, <a class="text-link" href="https://www.dolibarr.org/" target="_blank" rel="noopener">dolibarr.org</a>, <a class="text-link" href="https://github.com/Dolibarr/dolibarr" target="_blank" rel="noopener">Dolibarr on GitHub</a>. Checked 4 October 2026. Odoo and Dolibarr are trademarks of their respective owners; Built-N-AI is not affiliated with either project.</p>
     </div>
