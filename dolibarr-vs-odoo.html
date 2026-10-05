@@ -73,6 +73,16 @@
   ]
 }
 </script>
+<style>
+/* ERP section navigation (shared by all ERP pages) */
+.erp-nav { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+.erp-nav .wrap { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+.erp-nav .erp-nav-label { color: var(--lime); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 6px; }
+.erp-nav a { display: inline-block; padding: 7px 13px; border: 1px solid #2f4a66; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: 0.9rem; text-decoration: none; white-space: nowrap; }
+.erp-nav a:hover { border-color: var(--blue); background: rgba(36,181,255,0.08); }
+.erp-nav a[aria-current="page"] { border-color: var(--lime); color: var(--lime); background: rgba(167,240,74,0.08); }
+.erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 7px 0; color: var(--blue); font-weight: 700; }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -107,6 +117,19 @@
 </header>
 
 <main id="main">
+
+  <nav class="erp-nav" aria-label="ERP section">
+    <div class="wrap">
+      <span class="erp-nav-label">ERP</span>
+      <a href="/dolibarr-erp">Dolibarr ERP overview</a>
+      <a href="/dolibarr-vs-odoo" aria-current="page">Dolibarr vs Odoo</a>
+      <a href="/erp-implementation-cost">What it costs</a>
+      <a href="/erp-for-distributors">For distributors</a>
+      <a href="/erp-for-warehouse-inventory">For warehouse &amp; inventory</a>
+      <a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a>
+      <a class="erp-nav-more" href="/erp-resources">All ERP guides &rarr;</a>
+    </div>
+  </nav>
 
   <section class="page-head">
     <div class="wrap">
