@@ -77,6 +77,22 @@
     },
     {
       "@type": "Question",
+      "name": "What does WMS mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WMS meaning: warehouse management system. A WMS system directs receiving, put-away, picking, packing, shipping and counting on the warehouse floor. You will see it written both ways, WMS warehouse management system or warehouse management system WMS. Most warehouse management systems are stand-alone WMS software that sits beside the ERP and has to be kept in sync with it; a warehouse ERP does the same job inside the ERP. If you are asking what is WMS because someone told you to buy one, check first whether your ERP can run the floor. Dolibarr with Built-N-AI's modules does. Many WMS systems duplicate stock records the ERP already holds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an inventory management system the same as an ERP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. An inventory management system tracks stock: quantities, locations, movements and reorder points. Most inventory systems stop there. An ERP adds purchasing, sales, shipping and accounting on the same records. That is the point of ERP software inventory management, or enterprise resource planning inventory management in full: stock, cost and the books move together. A stock ERP such as Dolibarr includes the inventory system in its free core, so stand-alone inventory management systems are one less thing to integrate."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How does barcode cycle counting work in an ERP?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -320,6 +336,8 @@
         <div class="faq-item"><h3 class="h3">What ERP is best for a small warehouse?</h3><p>The best ERP for warehouse management in a small operation handles multi-warehouse, bin-level stock, barcode receiving against purchase orders, lot and serial tracking, picking and shipping that write tracking back to the order, and cycle counting that corrects the record on the spot. Built-N-AI runs all of that on Dolibarr, a free open-source ERP, with custom modules for paperless warehouse execution, single-touch bulk receiving, real-time inventory reconciliation and one-touch EasyPost shipping. It runs a live operation with more than 400,000 SKUs and no per-user license fees.</p></div>
         <div class="faq-item"><h3 class="h3">Can an ERP run paperless picking and QC?</h3><p>Yes. The Digital Warehouse Execution module replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero.</p></div>
         <div class="faq-item"><h3 class="h3">What is a WMS, and do I need a separate one if I have an ERP?</h3><p>A WMS is a warehouse management system: warehouse management software that directs receiving, put-away, picking and shipping. A small or middle-market warehouse usually does not need a separate one. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside the Dolibarr ERP, so picking, QC, shipping and cycle counts write directly to the same inventory records the office uses.</p></div>
+        <div class="faq-item"><h3 class="h3">What does WMS mean?</h3><p>WMS meaning: warehouse management system. A WMS system directs receiving, put-away, picking, packing, shipping and counting on the warehouse floor. You will see it written both ways, WMS warehouse management system or warehouse management system WMS. Most warehouse management systems are stand-alone WMS software that sits beside the ERP and has to be kept in sync with it; a warehouse ERP does the same job inside the ERP. If you are asking what is WMS because someone told you to buy one, check first whether your ERP can run the floor. Dolibarr with Built-N-AI&rsquo;s modules does. Many WMS systems duplicate stock records the ERP already holds.</p></div>
+        <div class="faq-item"><h3 class="h3">Is an inventory management system the same as an ERP?</h3><p>No. An inventory management system tracks stock: quantities, locations, movements and reorder points. Most inventory systems stop there. An ERP adds purchasing, sales, shipping and accounting on the same records. That is the point of ERP software inventory management, or enterprise resource planning inventory management in full: stock, cost and the books move together. A stock ERP such as Dolibarr includes the inventory system in its free core, so stand-alone inventory management systems are one less thing to integrate.</p></div>
         <div class="faq-item"><h3 class="h3">How does barcode cycle counting work in an ERP?</h3><p>An employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to non-sellable holding, corrects mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero.</p></div>
         <div class="faq-item"><h3 class="h3">How fast can an ERP receive a large purchase order?</h3><p>With Single-Touch Bulk Receiving, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, by auto-sequencing barcodes with labels printing as you go or by uploading a spreadsheet and receiving the whole PO with no scanning. A single 2,000-line purchase order has also been received in a single reception.</p></div>
         <div class="faq-item"><h3 class="h3">How can AI automate ERP receiving?</h3><p>AI receiving pays off when you receive large volumes of unknown or unmanifested retail product. A receiver photographs a unit once; AI identifies it, returns the part number, specs, UPC and price with a confidence score, and creates the product record and purchase order line. At TXS Corp that cut receiving labor cost 81%, from $23,500 to $4,500 per truckload. It is not the right tool for a standard purchase order that already exists; there, single-touch bulk receiving is faster, taking a 500-line PO from 4 hours to 1.</p></div>
