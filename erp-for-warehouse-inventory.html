@@ -88,7 +88,7 @@
       "name": "How fast can an ERP receive a large purchase order?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "With Built-N-AI's Single-Touch Bulk Receiving module, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, either by scanning the first barcode and auto-sequencing the rest with labels printing as you go, or by uploading a spreadsheet and receiving the whole PO with no scanning."
+        "text": "With Built-N-AI's Single-Touch Bulk Receiving module, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, either by scanning the first barcode and auto-sequencing the rest with labels printing as you go, or by uploading a spreadsheet and receiving the whole PO with no scanning. A single 2,000-line purchase order has also been received in a single reception."
       }
     },
     {
@@ -191,6 +191,7 @@
       <span class="erp-nav-set">
         <span class="erp-nav-group">Cost</span>
         <a href="/erp-implementation-cost">What it costs</a>
+        <a href="/free-erp-for-small-business">Free ERP</a>
       </span>
       <span class="erp-nav-set">
         <span class="erp-nav-group">By industry</span>
@@ -233,7 +234,7 @@
         <div class="metric"><strong>100%</strong><span>Paperless picking</span><small>No printed pick tickets, start to finish</small></div>
       </div>
       <div class="prose reveal" style="margin-top:24px">
-        <p>These numbers come from TXS Corp, where Built-N-AI implemented and ran Dolibarr as the operating system of a hardware distribution and consumer-electronics resale business with more than 400,000 SKUs and up to 300 order lines a day. Each result has a published case study linked below.</p>
+        <p>These numbers come from TXS Corp, where Built-N-AI implemented and ran Dolibarr as the operating system of a hardware distribution and consumer-electronics resale business with more than 400,000 SKUs and up to 300 orders a day. Each result has a published case study linked below.</p>
       </div>
     </div>
   </section>
@@ -250,7 +251,7 @@
           <thead><tr><th>Step</th><th>Dolibarr out of the box</th><th>Built-N-AI module</th></tr></thead>
           <tbody>
             <tr><td>1. Identify inbound product</td><td>Product catalog, supplier references.</td><td>AI Advanced Intake: photograph a unit once; AI returns part number, specs, UPC and price with a confidence score and creates the product record and PO line. Receiving labor cost fell 81%. Built for large volumes of unknown or unmanifested retail product; a standard PO that already exists goes straight to step 2.</td></tr>
-            <tr><td>2. Receive against the PO</td><td><span class="ok">Included:</span> receipts tied to the PO and to stock.</td><td>Single-Touch Bulk Receiving: scan the first barcode and auto-sequence the rest with labels printing as you go, or upload a spreadsheet and receive the whole PO. 500 lines in 1 hour instead of 4.</td></tr>
+            <tr><td>2. Receive against the PO</td><td><span class="ok">Included:</span> receipts tied to the PO and to stock.</td><td>Single-Touch Bulk Receiving: scan the first barcode and auto-sequence the rest with labels printing as you go, or upload a spreadsheet and receive the whole PO. 500 lines in 1 hour instead of 4. Proven up to 2,000 lines on a single PO, received in a single reception.</td></tr>
             <tr><td>3. Put away to bins</td><td><span class="ok">Included:</span> multiple warehouses, stock movements, valuation, min/max reorder.</td><td>Product, lot and variant data mapped to DYMO labels; photo capture in the browser attached to the process.</td></tr>
             <tr><td>4. Track lots and serials</td><td><span class="ok">Included:</span> lot, batch and serial numbers.</td><td>Serialized units carried through QC, picking and returns.</td></tr>
             <tr><td>5. Release and pick orders</td><td>PDF pick ticket.</td><td>Digital Warehouse Execution: orders evaluated against stock and fulfillment rules, paperless pick queue, bin-to-bin wave picking, FIFO selection with controlled exceptions, tote-based order control. A cancelled order cancels its pick ticket and blocks the tote.</td></tr>
@@ -319,7 +320,7 @@
         <div class="faq-item"><h3 class="h3">Can an ERP run paperless picking and QC?</h3><p>Yes. The Digital Warehouse Execution module replaced PDF pick tickets with paperless pick queues, bin-to-bin wave picking, FIFO selection, tote-based order control, Pass/Fail QC and live order status from created to shipped. Cancelled orders that shipped anyway went from about 20 a month to zero.</p></div>
         <div class="faq-item"><h3 class="h3">What is a WMS, and do I need a separate one if I have an ERP?</h3><p>A WMS is a warehouse management system: warehouse management software that directs receiving, put-away, picking and shipping. A small or middle-market warehouse usually does not need a separate one. A separate WMS adds a second system, a second license and an integration to maintain. Built-N-AI builds warehouse execution as modules inside the Dolibarr ERP, so picking, QC, shipping and cycle counts write directly to the same inventory records the office uses.</p></div>
         <div class="faq-item"><h3 class="h3">How does barcode cycle counting work in an ERP?</h3><p>An employee scans every unit in a bin. The system compares each scan to the ERP, marks unscanned units missing and moves them to non-sellable holding, corrects mislocated units, and reconciles the bin the moment scanning finishes, with a full audit trail. Manual list comparisons dropped to zero.</p></div>
-        <div class="faq-item"><h3 class="h3">How fast can an ERP receive a large purchase order?</h3><p>With Single-Touch Bulk Receiving, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, by auto-sequencing barcodes with labels printing as you go or by uploading a spreadsheet and receiving the whole PO with no scanning.</p></div>
+        <div class="faq-item"><h3 class="h3">How fast can an ERP receive a large purchase order?</h3><p>With Single-Touch Bulk Receiving, a 500-line PO went from 4 hours to 1 hour and labor cost per PO fell 75%, by auto-sequencing barcodes with labels printing as you go or by uploading a spreadsheet and receiving the whole PO with no scanning. A single 2,000-line purchase order has also been received in a single reception.</p></div>
         <div class="faq-item"><h3 class="h3">How can AI automate ERP receiving?</h3><p>AI receiving pays off when you receive large volumes of unknown or unmanifested retail product. A receiver photographs a unit once; AI identifies it, returns the part number, specs, UPC and price with a confidence score, and creates the product record and purchase order line. At TXS Corp that cut receiving labor cost 81%, from $23,500 to $4,500 per truckload. It is not the right tool for a standard purchase order that already exists; there, single-touch bulk receiving is faster, taking a 500-line PO from 4 hours to 1.</p></div>
         <div class="faq-item"><h3 class="h3">How good is Dolibarr for warehouse management?</h3><p>Dolibarr warehouse management out of the box covers multiple warehouses, stock movements, valuation and min/max reorder levels, and Dolibarr barcode inventory covers barcode support with lot, batch and serial tracking. Paperless picking, wave and FIFO picking, tote control, Pass/Fail QC and cycle counts that reconcile on the spot are not in the core; Built-N-AI adds them as modules.</p></div>
         <div class="faq-item"><h3 class="h3">What does a warehouse ERP cost?</h3><p>Built-N-AI&rsquo;s Dolibarr ERP implementation is a fixed $29,500 for up to 25 users, one entity and one warehouse, typically live in about 1 month, with no per-user license fees. Warehouse execution, bulk receiving and cycle-count modules are scoped separately as fixed-price deliverables. <a class="text-link" href="/erp-implementation-cost">Full cost guide &rarr;</a></p></div>
