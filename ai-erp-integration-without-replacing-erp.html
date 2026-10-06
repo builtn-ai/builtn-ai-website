@@ -94,6 +94,51 @@
 .erp-nav .erp-nav-group { color: var(--muted); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 10px; }
 .erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 7px 0; color: var(--blue); font-weight: 700; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can AI for ERP systems actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four things, each proven on Dolibarr: write clean data in (an AI intake module turns product photos into ERP records and purchase orders after human review), fill in what is missing (attributes backfilled for 300,000 existing parts), run workflows on top (paperless picking, QC and shipping against live orders), and answer questions in plain English."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to replace my ERP to use AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The ERP stays the system of record. AI is added around it as modules, tools and workflows that remove the manual work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to add AI to an existing ERP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the workflow. In our AI Intake case study, the module went from idea to live production inside the existing ERP in under two weeks, at 90%+ accuracy on first launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this work with my ERP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each pattern here is proven on Dolibarr. For another ERP, the assessment first documents how your system exposes its data and where that data lives, then ranks what is worth building."
+      }
+    }
+  ]
+}
+</script>
+<style>
+.faq-item{border-top:1px solid var(--line);padding:18px 0}
+.faq-item h3{margin-bottom:8px}
+.faq-item p{color:var(--muted)}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -229,6 +274,21 @@
       <div class="btn-row reveal" style="margin-top:24px">
         <a class="btn btn--ghost" href="/ai-erp-integration">AI &amp; ERP integration &rarr;</a>
         <a class="btn btn--ghost" href="/case-study-ai-intake">AI Intake case study &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-600">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Questions people ask</p>
+        <h2 class="h2">AI on your current ERP, answered plainly.</h2>
+      </div>
+      <div class="reveal" style="margin-top:20px">
+        <div class="faq-item"><h3 class="h3">What can AI for ERP systems actually do?</h3><p>Four things, each proven on Dolibarr: write clean data in (an AI intake module turns product photos into ERP records and purchase orders after human review), fill in what is missing (attributes backfilled for 300,000 existing parts), run workflows on top (paperless picking, QC and shipping against live orders), and answer questions in plain English.</p></div>
+        <div class="faq-item"><h3 class="h3">Do I have to replace my ERP to use AI?</h3><p>No. The ERP stays the system of record. AI is added around it as modules, tools and workflows that remove the manual work.</p></div>
+        <div class="faq-item"><h3 class="h3">How long does it take to add AI to an existing ERP?</h3><p>It depends on the workflow. In our AI Intake case study, the module went from idea to live production inside the existing ERP in under two weeks, at 90%+ accuracy on first launch.</p></div>
+        <div class="faq-item"><h3 class="h3">Will this work with my ERP?</h3><p>Each pattern here is proven on Dolibarr. For another ERP, the assessment first documents how your system exposes its data and where that data lives, then ranks what is worth building.</p></div>
       </div>
     </div>
   </section>
