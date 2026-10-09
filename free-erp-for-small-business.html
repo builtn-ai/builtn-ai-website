@@ -162,15 +162,25 @@
 </script>
 <style>
 /* ERP section navigation (shared by all ERP pages) */
-.erp-nav { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
-.erp-nav .wrap { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+.erp-nav { position: relative; z-index: 20; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+.erp-nav .wrap { display: flex; align-items: center; gap: 6px 8px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
 .erp-nav .erp-nav-label { color: var(--lime); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 6px; }
-.erp-nav a { display: inline-block; padding: 7px 13px; border: 1px solid #2f4a66; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: 0.9rem; text-decoration: none; white-space: nowrap; }
-.erp-nav a:hover { border-color: var(--blue); background: rgba(36,181,255,0.08); }
-.erp-nav a[aria-current="page"] { border-color: var(--lime); color: var(--lime); background: rgba(167,240,74,0.08); }
-.erp-nav .erp-nav-set { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; }
-.erp-nav .erp-nav-group { color: var(--muted); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 10px; }
-.erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 7px 0; color: var(--blue); font-weight: 700; }
+.erp-nav a, .erp-nav summary { display: inline-block; padding: 6px 12px; border: 1px solid #2f4a66; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: 0.9rem; text-decoration: none; white-space: nowrap; cursor: pointer; }
+.erp-nav summary { list-style: none; }
+.erp-nav summary::-webkit-details-marker { display: none; }
+.erp-nav summary::after { content: "\25BE"; margin-left: 6px; font-size: 0.75em; color: var(--muted); }
+.erp-nav a:hover, .erp-nav summary:hover { border-color: var(--blue); background: rgba(36,181,255,0.08); }
+.erp-nav a[aria-current="page"], .erp-nav details.is-active > summary { border-color: var(--lime); color: var(--lime); background: rgba(167,240,74,0.08); }
+.erp-nav details { position: relative; }
+.erp-nav details[open] > summary { border-color: var(--blue); }
+.erp-nav .erp-nav-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 230px; display: flex; flex-direction: column; gap: 2px; padding: 8px; background: #0b1626; border: 1px solid #2f4a66; border-radius: 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
+.erp-nav .erp-nav-menu a { border: 0; border-radius: 9px; padding: 8px 12px; }
+.erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 6px 0; color: var(--blue); font-weight: 700; }
+@media (max-width: 700px) {
+  .erp-nav details { position: static; }
+  .erp-nav .erp-nav-menu { left: 16px; right: 16px; min-width: 0; }
+  .erp-nav .erp-nav-more { margin-left: 0; }
+}
 </style>
 </head>
 <body>
@@ -212,30 +222,10 @@
       <span class="erp-nav-label">ERP</span>
       <a href="/dolibarr-erp">Overview</a>
       <a href="/erp-glossary">What is ERP?</a>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">Compare</span>
-        <a href="/best-erp-for-small-distributors">Shortlist</a>
-        <a href="/open-source-erp">Open source</a>
-        <a href="/dolibarr-vs-odoo">vs Odoo</a>
-        <a href="/netsuite-alternative">vs NetSuite</a>
-      </span>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">Cost</span>
-        <a href="/erp-implementation-cost">What it costs</a>
-        <a href="/free-erp-for-small-business" aria-current="page">Free ERP</a>
-      </span>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">By industry</span>
-        <a href="/erp-for-distributors">Distributors</a>
-        <a href="/erp-for-warehouse-inventory">Warehouse &amp; inventory</a>
-        <a href="/erp-for-small-manufacturers">Small manufacturers</a>
-      </span>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">Services</span>
-        <a href="/erp-implementation-services">ERP services</a>
-        <a href="/dolibarr-implementation">Dolibarr implementation</a>
-        <a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a>
-      </span>
+      <details><summary>Compare</summary><div class="erp-nav-menu"><a href="/dolibarr-vs-odoo">Dolibarr vs Odoo</a><a href="/dolibarr-vs-acumatica">Dolibarr vs Acumatica</a><a href="/netsuite-alternative">Dolibarr vs NetSuite</a><a href="/best-erp-for-small-distributors">ERP shortlist</a><a href="/open-source-erp">Open-source ERP</a></div></details>
+      <details class="is-active"><summary>Cost</summary><div class="erp-nav-menu"><a href="/erp-implementation-cost">What ERP costs</a><a href="/free-erp-for-small-business" aria-current="page">Free ERP</a></div></details>
+      <details><summary>Industries</summary><div class="erp-nav-menu"><a href="/erp-for-distributors">Distributors</a><a href="/erp-for-warehouse-inventory">Warehouse &amp; inventory</a><a href="/erp-for-small-manufacturers">Small manufacturers</a></div></details>
+      <details><summary>Services</summary><div class="erp-nav-menu"><a href="/erp-implementation-services">ERP services</a><a href="/dolibarr-implementation">Dolibarr implementation</a><a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a></div></details>
       <a class="erp-nav-more" href="/erp-resources">All ERP guides &rarr;</a>
     </div>
   </nav>
@@ -391,6 +381,12 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.erp-nav details').forEach(function(d){
+  d.addEventListener('toggle',function(){ if(d.open){ document.querySelectorAll('.erp-nav details').forEach(function(o){ if(o!==d) o.open=false; }); } });
+});
+document.addEventListener('click',function(e){ if(!e.target.closest('.erp-nav details')) document.querySelectorAll('.erp-nav details[open]').forEach(function(o){o.open=false;}); });
+</script>
 <script src="assets/js/main.v6.js" defer></script>
 </body>
 </html>

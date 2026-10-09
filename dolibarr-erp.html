@@ -211,15 +211,61 @@
 </style>
 <style>
 /* ERP section navigation (shared by all ERP pages) */
-.erp-nav { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
-.erp-nav .wrap { display: flex; align-items: center; gap: 6px 10px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+.erp-nav { position: relative; z-index: 20; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+.erp-nav .wrap { display: flex; align-items: center; gap: 6px 8px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
 .erp-nav .erp-nav-label { color: var(--lime); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 6px; }
-.erp-nav a { display: inline-block; padding: 7px 13px; border: 1px solid #2f4a66; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: 0.9rem; text-decoration: none; white-space: nowrap; }
-.erp-nav a:hover { border-color: var(--blue); background: rgba(36,181,255,0.08); }
-.erp-nav a[aria-current="page"] { border-color: var(--lime); color: var(--lime); background: rgba(167,240,74,0.08); }
-.erp-nav .erp-nav-set { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; }
-.erp-nav .erp-nav-group { color: var(--muted); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 10px; }
-.erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 7px 0; color: var(--blue); font-weight: 700; }
+.erp-nav a, .erp-nav summary { display: inline-block; padding: 6px 12px; border: 1px solid #2f4a66; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: 0.9rem; text-decoration: none; white-space: nowrap; cursor: pointer; }
+.erp-nav summary { list-style: none; }
+.erp-nav summary::-webkit-details-marker { display: none; }
+.erp-nav summary::after { content: "\25BE"; margin-left: 6px; font-size: 0.75em; color: var(--muted); }
+.erp-nav a:hover, .erp-nav summary:hover { border-color: var(--blue); background: rgba(36,181,255,0.08); }
+.erp-nav a[aria-current="page"], .erp-nav details.is-active > summary { border-color: var(--lime); color: var(--lime); background: rgba(167,240,74,0.08); }
+.erp-nav details { position: relative; }
+.erp-nav details[open] > summary { border-color: var(--blue); }
+.erp-nav .erp-nav-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 230px; display: flex; flex-direction: column; gap: 2px; padding: 8px; background: #0b1626; border: 1px solid #2f4a66; border-radius: 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
+.erp-nav .erp-nav-menu a { border: 0; border-radius: 9px; padding: 8px 12px; }
+.erp-nav .erp-nav-more { margin-left: auto; border: 0; padding: 6px 0; color: var(--blue); font-weight: 700; }
+@media (max-width: 700px) {
+  .erp-nav details { position: static; }
+  .erp-nav .erp-nav-menu { left: 16px; right: 16px; min-width: 0; }
+  .erp-nav .erp-nav-more { margin-left: 0; }
+}
+</style>
+
+<style>
+/* Feature checklist (shared by comparison pages) */
+#price-protection .cmp-wrap{overflow-x:auto;margin-top:24px;-webkit-overflow-scrolling:touch}
+#price-protection .cmp{width:100%;border-collapse:collapse;font-size:0.95em}
+#price-protection .cmp th,#price-protection .cmp td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+#price-protection .cmp th{color:#fff;font-weight:700;background:rgba(36,181,255,0.06)}
+#price-protection .cmp td{color:var(--muted)}
+#price-protection .cmp td:first-child{color:#fff;font-weight:600}
+.fc-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}
+.fc-tools button{font:inherit;font-weight:700;font-size:0.9rem;padding:8px 16px;border-radius:999px;border:1px solid #2f4a66;background:transparent;color:var(--ink);cursor:pointer}
+.fc-tools button[aria-pressed="true"]{border-color:var(--lime);color:var(--lime);background:rgba(167,240,74,0.08)}
+.fc-sum{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.fc-sum div{border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:220px}
+.fc-sum strong{display:block;font-size:1.5rem;color:#fff}
+.fc-sum span{color:var(--muted);font-size:0.9rem}
+.fc-wrap{overflow-x:auto;margin-top:18px;-webkit-overflow-scrolling:touch}
+.fc{width:100%;border-collapse:collapse;min-width:680px;font-size:0.93em}
+.fc th,.fc td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.fc thead th{color:#fff;background:rgba(36,181,255,0.06);position:sticky;top:0}
+.fc td{color:var(--muted)}
+.fc td:first-child{color:#fff;font-weight:600}
+.fc td.fc-m{white-space:nowrap}
+.fc tr.fc-area th{color:var(--lime);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;background:transparent;padding-top:18px}
+.fc.only-diff tr[data-diff="0"],.fc.only-diff tr.fc-area.is-empty{display:none}
+.fm{display:inline-block;font-weight:700;font-size:0.85rem;padding:3px 9px;border-radius:999px;border:1px solid transparent}
+.fm-yes{color:var(--lime);border-color:rgba(167,240,74,0.35)}
+.fm-exp{color:var(--lime);border-color:rgba(167,240,74,0.35);border-style:dashed}
+.fm-addon{color:#ffd36b;border-color:rgba(255,211,107,0.4)}
+.fm-custom{color:#24b5ff;border-color:rgba(36,181,255,0.45)}
+.fm-partial{color:#d7f59f;border-color:rgba(215,245,159,0.35)}
+.fm-star{color:#c9b6ff;border-color:rgba(201,182,255,0.4)}
+.fm-no{color:#ff8f8f;border-color:rgba(255,143,143,0.35)}
+.fm-unk{color:var(--muted);border-color:var(--line)}
+.fc-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;color:var(--muted);font-size:0.88rem;align-items:center}
 </style>
 </head>
 <body>
@@ -261,30 +307,10 @@
       <span class="erp-nav-label">ERP</span>
       <a href="/dolibarr-erp" aria-current="page">Overview</a>
       <a href="/erp-glossary">What is ERP?</a>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">Compare</span>
-        <a href="/best-erp-for-small-distributors">Shortlist</a>
-        <a href="/open-source-erp">Open source</a>
-        <a href="/dolibarr-vs-odoo">vs Odoo</a>
-        <a href="/netsuite-alternative">vs NetSuite</a>
-      </span>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">Cost</span>
-        <a href="/erp-implementation-cost">What it costs</a>
-        <a href="/free-erp-for-small-business">Free ERP</a>
-      </span>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">By industry</span>
-        <a href="/erp-for-distributors">Distributors</a>
-        <a href="/erp-for-warehouse-inventory">Warehouse &amp; inventory</a>
-        <a href="/erp-for-small-manufacturers">Small manufacturers</a>
-      </span>
-      <span class="erp-nav-set">
-        <span class="erp-nav-group">Services</span>
-        <a href="/erp-implementation-services">ERP services</a>
-        <a href="/dolibarr-implementation">Dolibarr implementation</a>
-        <a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a>
-      </span>
+      <details><summary>Compare</summary><div class="erp-nav-menu"><a href="/dolibarr-vs-odoo">Dolibarr vs Odoo</a><a href="/dolibarr-vs-acumatica">Dolibarr vs Acumatica</a><a href="/netsuite-alternative">Dolibarr vs NetSuite</a><a href="/best-erp-for-small-distributors">ERP shortlist</a><a href="/open-source-erp">Open-source ERP</a></div></details>
+      <details><summary>Cost</summary><div class="erp-nav-menu"><a href="/erp-implementation-cost">What ERP costs</a><a href="/free-erp-for-small-business">Free ERP</a></div></details>
+      <details><summary>Industries</summary><div class="erp-nav-menu"><a href="/erp-for-distributors">Distributors</a><a href="/erp-for-warehouse-inventory">Warehouse &amp; inventory</a><a href="/erp-for-small-manufacturers">Small manufacturers</a></div></details>
+      <details><summary>Services</summary><div class="erp-nav-menu"><a href="/erp-implementation-services">ERP services</a><a href="/dolibarr-implementation">Dolibarr implementation</a><a href="/ai-erp-integration-without-replacing-erp">AI on your current ERP</a></div></details>
       <a class="erp-nav-more" href="/erp-resources">All ERP guides &rarr;</a>
     </div>
   </nav>
@@ -407,6 +433,62 @@
         <article class="panel list-card"><h3 class="h3">Human approval where judgment matters</h3><p>Confidence scores and validation before anything posts.</p></article>
         <article class="panel list-card"><h3 class="h3">Connected to what you already use</h3><p>APIs, web services and webhooks. In production today: EasyPost, Rithum, eBay, Amazon and Apache Superset.</p></article>
       </div>
+    </div>
+  </section>
+
+  <section class="section band-700" id="compare">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">How Dolibarr compares</p>
+        <h2 class="h2">Dolibarr against the three ERPs you are most likely weighing.</h2>
+        <p class="lead">We score Odoo, Acumatica and NetSuite against Dolibarr on the same 66 features. Here are the ones buyers ask about most. Pick a matchup below for the full one-to-one comparison, with a filter that shows only the differences.</p>
+      </div>
+      <div class="fc-legend"><span>Key:</span><span class="fm fm-yes">✓ Included</span><span class="fm fm-addon">Add-on, extra cost</span><span class="fm fm-custom">Built-N-AI module</span><span class="fm fm-partial">Partial</span><span class="fm fm-exp">✓ Experimental</span><span class="fm fm-star">Available, cost not published</span><span class="fm fm-no">Not available</span><span class="fm fm-unk">Not verified</span></div>
+      <div class="fc-wrap reveal"><table class="fc">
+        <thead><tr><th>Feature</th><th>Dolibarr</th><th>Odoo</th><th>Acumatica</th><th>NetSuite</th></tr></thead>
+        <tbody>
+          <tr><td>Free software license</td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td></tr>
+          <tr><td>Unlimited users</td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td></tr>
+          <tr><td>Published pricing</td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td></tr>
+          <tr><td>Full source code access</td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-partial">Partial</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td></tr>
+          <tr><td>Run on your own server</td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-no">Not available</span></td></tr>
+          <tr><td>Multi-company / intercompany</td><td class="fc-m"><span class="fm fm-no">Not available</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td><td class="fc-m"><span class="fm fm-star">Available, cost not published</span></td></tr>
+          <tr><td>Barcodes / labels</td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td><td class="fc-m"><span class="fm fm-star">Available, cost not published</span></td></tr>
+          <tr><td>Bin locations</td><td class="fc-m"><span class="fm fm-custom">Built-N-AI module</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td></tr>
+          <tr><td>Picking</td><td class="fc-m"><span class="fm fm-custom">Built-N-AI module</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td></tr>
+          <tr><td>Quality control</td><td class="fc-m"><span class="fm fm-custom">Built-N-AI module</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-unk">Not verified</span></td><td class="fc-m"><span class="fm fm-addon">Add-on, extra cost</span></td></tr>
+          <tr><td>Returns (RMA / RTV)</td><td class="fc-m"><span class="fm fm-custom">Built-N-AI module</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-unk">Not verified</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td></tr>
+          <tr><td>AI assistant</td><td class="fc-m"><span class="fm fm-exp">✓ Experimental</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td></tr>
+          <tr><td>AI agent connection (MCP server)</td><td class="fc-m"><span class="fm fm-exp">✓ Experimental</span></td><td class="fc-m"><span class="fm fm-unk">Not verified</span></td><td class="fc-m"><span class="fm fm-unk">Not verified</span></td><td class="fc-m"><span class="fm fm-yes">✓ Included</span></td></tr>
+          <tr><td>Features available, of 66</td><td class="fc-m"><strong style="color:#fff">59</strong></td><td class="fc-m"><strong style="color:#fff">54</strong></td><td class="fc-m"><strong style="color:#fff">46</strong></td><td class="fc-m"><strong style="color:#fff">48</strong></td></tr>
+          <tr><td>Of those, paid add-ons</td><td class="fc-m"><strong style="color:#fff">0</strong></td><td class="fc-m"><strong style="color:#fff">4</strong></td><td class="fc-m"><strong style="color:#fff">16</strong></td><td class="fc-m"><strong style="color:#fff">14</strong></td></tr>
+        </tbody></table></div>
+      <p class="reveal" style="margin-top:12px;color:var(--muted);font-size:0.9em">Dolibarr counts include 6 Built-N-AI modules, marked separately from stock Dolibarr. Checked 9 October 2026; sources are listed on each comparison page.</p>
+      <div class="auto-grid reveal" style="--col:260px;margin-top:24px">
+        <a class="panel list-card" href="/dolibarr-vs-odoo" style="display:block;text-decoration:none"><p class="tag-label">Side by side</p><h3 class="h3">Dolibarr vs Odoo &rarr;</h3><p>Two open-source ERPs. One stayed free; one charges per user for the apps an inventory business needs most.</p></a>
+        <a class="panel list-card" href="/dolibarr-vs-acumatica" style="display:block;text-decoration:none"><p class="tag-label">Side by side</p><h3 class="h3">Dolibarr vs Acumatica &rarr;</h3><p>Unlimited users on both. One has no subscription; the other is priced by modules and transaction volume through resellers.</p></a>
+        <a class="panel list-card" href="/netsuite-alternative" style="display:block;text-decoration:none"><p class="tag-label">Side by side</p><h3 class="h3">Dolibarr vs NetSuite &rarr;</h3><p>The cloud ERP most distributors are quoted, against an open-source system with the warehouse modules already built.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-600" id="price-protection">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker is-lime">Price protection</p>
+        <h2 class="h2">Dolibarr has no license fee to raise. The others can, and have.</h2>
+        <p class="lead">A subscription price is a starting point, not a promise. Here is what each vendor commits to at renewal, and what has already happened.</p>
+      </div>
+      <div class="cmp-wrap reveal">
+        <table class="cmp" style="min-width:1040px">
+          <thead><tr><th></th><th>Dolibarr</th><th>Odoo</th><th>Acumatica</th><th>NetSuite</th></tr></thead>
+          <tbody>
+            <tr><td>Price protection</td><td>No license fee to raise. Dolibarr is $0 under the GPL v3 or later, and the versions you already run cannot be repriced or taken back.</td><td>No published cap on renewal prices. The first-year discount applies for 12 months, on the initial users ordered only.</td><td>Renewal increases capped at 10% a year, per Acumatica&rsquo;s April 2025 licensing guide. The cap excludes services and support, and first-year discounts do not carry into renewals.</td><td>No published cap. Renewals are priced at Oracle&rsquo;s then-current pricing unless your contract says otherwise.</td></tr>
+<tr><td>Recent price increases</td><td>None. There is no license fee.</td><td>U.S. Custom plan list price up 31%, from $46.70 to $61.00 per user per month (between late December 2025 and January 2026). Custom plan up about 20% in Europe, announced 24 September 2026. Previous change: 2022.</td><td>No dated increase history published.</td><td>Licensing advisors report first renewals typically carry an uplift of about 10%. No dated list-price history published.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="reveal" style="margin-top:16px;color:var(--muted);font-size:0.9em">Hosting, support and implementation can change in price on any system, Dolibarr included; this compares the software license. Sources: <a class="text-link" href="https://www.odoo.com/pricing" target="_blank" rel="noopener">odoo.com pricing</a>, <a class="text-link" href="https://mediodconsulting.com/odoo-price-increase-2026/" target="_blank" rel="noopener">Mediod Consulting</a>, <a class="text-link" href="https://www.skysize.io/blog/guides-5/how-much-does-odoo-cost-in-2026-the-complete-breakdown-31" target="_blank" rel="noopener">Skysize</a>, <a class="text-link" href="https://www.acumatica.com/media/2025/04/Acumatica-Licensing-Guide-April-2025-Final.pdf" target="_blank" rel="noopener">Acumatica Licensing Guide, April 2025</a>, <a class="text-link" href="https://redresscompliance.com/oracle-netsuite-negotiation" target="_blank" rel="noopener">Redress Compliance on NetSuite renewals</a>. Checked 9 October 2026.</p>
     </div>
   </section>
 
@@ -543,6 +625,12 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.erp-nav details').forEach(function(d){
+  d.addEventListener('toggle',function(){ if(d.open){ document.querySelectorAll('.erp-nav details').forEach(function(o){ if(o!==d) o.open=false; }); } });
+});
+document.addEventListener('click',function(e){ if(!e.target.closest('.erp-nav details')) document.querySelectorAll('.erp-nav details[open]').forEach(function(o){o.open=false;}); });
+</script>
 <script src="assets/js/main.v6.js" defer></script>
 </body>
 </html>
