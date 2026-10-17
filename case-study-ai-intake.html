@@ -152,7 +152,7 @@
       </div>
       <div class="reveal" style="display:grid;gap:clamp(28px,4vw,48px);margin-top:clamp(24px,3vw,38px)">
         <figure style="margin:0">
-          <figcaption class="tag-label" style="margin-bottom:12px">Part 1 &middot; Intake and AI identification (1:13)</figcaption>
+          <figcaption class="tag-label" style="margin-bottom:16px;font-size:clamp(1.25rem,2vw,1.9rem);letter-spacing:0.06em;text-align:center">Part 1 &middot; Intake and AI identification (1:13)</figcaption>
           <div class="video-frame">
             <video controls playsinline preload="none" poster="assets/video/docksnap-part1-poster.jpg" aria-label="DockSnap demo part 1: barcode, photos and bin entry, then AI identification at 100% confidence">
               <source src="assets/video/docksnap-part1-intake-vo.mp4" type="video/mp4">
@@ -160,7 +160,7 @@
           </div>
         </figure>
         <figure style="margin:0">
-          <figcaption class="tag-label" style="margin-bottom:12px">Part 2 &middot; Part number, PO, receipt and in stock (0:40)</figcaption>
+          <figcaption class="tag-label" style="margin-bottom:16px;font-size:clamp(1.25rem,2vw,1.9rem);letter-spacing:0.06em;text-align:center">Part 2 &middot; Create new Part Number, Create new PO#, Receive entire PO (0:40)</figcaption>
           <div class="video-frame">
             <video controls playsinline preload="none" poster="assets/video/docksnap-part2-poster.jpg" aria-label="DockSnap demo part 2: part number, purchase order and receipt created, item shown in stock">
               <source src="assets/video/docksnap-part2-po-receipt-vo.mp4" type="video/mp4">
@@ -460,6 +460,28 @@
   </div>
 </footer>
 
+<style>
+#docksnap-demo .video-frame .ds-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:0;padding:0;margin:0;background:rgba(1,5,14,.18);cursor:pointer;z-index:2}
+#docksnap-demo .video-frame .ds-play span{width:clamp(64px,8vw,104px);height:clamp(64px,8vw,104px);border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.45);transition:transform .15s ease}
+#docksnap-demo .video-frame .ds-play:hover span,#docksnap-demo .video-frame .ds-play:focus-visible span{transform:scale(1.08)}
+#docksnap-demo .video-frame .ds-play svg{width:42%;height:42%;margin-left:8%;fill:#01050e}
+#docksnap-demo .video-frame.is-playing .ds-play{display:none}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('#docksnap-demo .video-frame').forEach(function(f){
+    var v=f.querySelector('video'); if(!v) return;
+    var b=document.createElement('button'); b.type='button'; b.className='ds-play';
+    b.setAttribute('aria-label','Play '+(v.getAttribute('aria-label')||'video'));
+    b.innerHTML='<span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg></span>';
+    b.addEventListener('click',function(){ var pr=v.play(); if(pr&&pr.catch){pr.catch(function(){});} });
+    f.appendChild(b);
+    v.addEventListener('play',function(){ f.classList.add('is-playing'); });
+    v.addEventListener('pause',function(){ if(!v.seeking) f.classList.remove('is-playing'); });
+    v.addEventListener('ended',function(){ f.classList.remove('is-playing'); });
+  });
+});
+</script>
 <script src="assets/js/main.v6.js" defer></script>
 </body>
 </html>
