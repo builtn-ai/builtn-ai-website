@@ -37,6 +37,7 @@ Approach: start with the business problem, not the technology. Find it. Build it
 - [How to identify business processes to automate with AI](https://builtn.ai/how-to-identify-processes-to-automate-with-ai)
 - [AI and automation for inventory and warehouse operations](https://builtn.ai/ai-automation-inventory-warehouse-operations)
 - [How AI can integrate with an existing ERP instead of replacing it](https://builtn.ai/ai-erp-integration-without-replacing-erp)
+- [Why most ERP go-lives fail (it isn't the software)](https://builtn.ai/why-erp-go-lives-fail)
 
 ## Case studies
 - [Case Studies overview](https://builtn.ai/case-studies): Operating results from AI and automation workflows built for receiving, product data, warehouse execution and inventory accuracy.
