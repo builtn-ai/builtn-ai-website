@@ -339,6 +339,28 @@
   </div>
 </footer>
 
+<style>
+#docksnap-demo .video-frame .ds-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:0;padding:0;margin:0;background:rgba(1,5,14,.18);cursor:pointer;z-index:2}
+#docksnap-demo .video-frame .ds-play span{width:clamp(64px,8vw,104px);height:clamp(64px,8vw,104px);border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.45);transition:transform .15s ease}
+#docksnap-demo .video-frame .ds-play:hover span,#docksnap-demo .video-frame .ds-play:focus-visible span{transform:scale(1.08)}
+#docksnap-demo .video-frame .ds-play svg{width:42%;height:42%;margin-left:8%;fill:#01050e}
+#docksnap-demo .video-frame.is-playing .ds-play{display:none}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('#docksnap-demo .video-frame').forEach(function(f){
+    var v=f.querySelector('video'); if(!v) return;
+    var b=document.createElement('button'); b.type='button'; b.className='ds-play';
+    b.setAttribute('aria-label','Play '+(v.getAttribute('aria-label')||'video'));
+    b.innerHTML='<span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg></span>';
+    b.addEventListener('click',function(){ var pr=v.play(); if(pr&&pr.catch){pr.catch(function(){});} });
+    f.appendChild(b);
+    v.addEventListener('play',function(){ f.classList.add('is-playing'); });
+    v.addEventListener('pause',function(){ if(!v.seeking) f.classList.remove('is-playing'); });
+    v.addEventListener('ended',function(){ f.classList.remove('is-playing'); });
+  });
+});
+</script>
 <script src="assets/js/main.v6.js" defer></script>
 <script src="assets/js/video.v1.js" defer></script>
 <script src="assets/js/hero-pulse.v1.js?v=2" defer></script>
