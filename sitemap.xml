@@ -175,6 +175,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://builtn.ai/case-study-ebay-auto-ap-reconciliation</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://builtn.ai/references</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
